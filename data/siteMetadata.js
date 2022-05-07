@@ -10,12 +10,12 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
+  email: 'jseanpatel@gmail.com',
+  github: 'https://github.com/jseanpatel',
+  twitter: 'https://twitter.com/jseanpatel',
+  facebook: 'https://facebook.com/jseanpatel',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  linkedin: 'https://www.linkedin.com/jseanpatel',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
