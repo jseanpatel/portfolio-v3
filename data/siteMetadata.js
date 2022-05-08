@@ -1,8 +1,8 @@
 const siteMetadata = {
   title: 'Jacob Patel Blog',
-  author: 'Jacob Patel Blog',
+  author: 'Jacob Patel',
   headerTitle: 'Jacob Patel Blog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: 'A blog about Spain, software and everything in between',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
