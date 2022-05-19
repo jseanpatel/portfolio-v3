@@ -1,15 +1,13 @@
-import React, { useRef, useState } from 'react'
-
-import siteMetadata from '@/data/siteMetadata'
+import React, { useRef, useState } from 'react';
 
 const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
-  const inputEl = useRef<HTMLInputElement>(null)
-  const [error, setError] = useState(false)
-  const [message, setMessage] = useState('')
-  const [subscribed, setSubscribed] = useState(false)
+  const inputEl = useRef<HTMLInputElement>(null);
+  const [error, setError] = useState(false);
+  const [message, setMessage] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
 
   const subscribe = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
     // const res = await fetch(`/api/${siteMetadata.newsletter.provider}`, {
     //   body: JSON.stringify({
@@ -20,23 +18,32 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
     //   },
     //   method: 'POST',
     // })
-    const error  = false;
+    const error = false;
     if (error) {
-      setError(true)
-      setMessage('Your e-mail address is invalid or you are already subscribed!')
-      return
+      setError(true);
+      setMessage(
+        'Your e-mail address is invalid or you are already subscribed!',
+      );
+      return;
     }
 
-    inputEl.current.value = ''
-    setError(false)
-    setSubscribed(true)
-    setMessage('Successfully! 🎉 You are now subscribed.')
-  }
+    inputEl.current.value = '';
+    setError(false);
+    setSubscribed(true);
+    setMessage('Successfully! 🎉 You are now subscribed.');
+  };
 
   return (
     <div>
-      <div className="pb-1 text-lg font-semibold text-gray-800 dark:text-gray-100">{title}</div>
-      <form className="flex flex-col sm:flex-row" onSubmit={subscribe} data-netlify="true" name="subscribe-newsletter">
+      <div className="pb-1 text-lg font-semibold text-gray-800 dark:text-gray-100">
+        {title}
+      </div>
+      <form
+        className="flex flex-col sm:flex-row"
+        onSubmit={subscribe}
+        data-netlify="true"
+        name="subscribe-newsletter"
+      >
         <div>
           <label className="sr-only" htmlFor="email-input">
             Email address
@@ -46,7 +53,9 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
             className="px-4 rounded-md w-72 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-600 dark:bg-black"
             id="email-input"
             name="email"
-            placeholder={subscribed ? "You're subscribed !  🎉" : 'Enter your email'}
+            placeholder={
+              subscribed ? "You're subscribed !  🎉" : 'Enter your email'
+            }
             ref={inputEl}
             required
             type="email"
@@ -55,8 +64,10 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
         </div>
         <div className="flex w-full mt-2 rounded-md shadow-sm sm:mt-0 sm:ml-3">
           <button
-            className={`w-full rounded-md bg-primary-600 py-2 px-4 font-medium text-white sm:py-0 ${
-              subscribed ? 'cursor-default' : 'hover:bg-primary-700 dark:hover:bg-primary-400'
+            className={`w-full rounded-md bg-primary-700 dark:bg-primary-700 py-2 px-4 font-medium text-white sm:py-0 ${
+              subscribed
+                ? 'cursor-default'
+                : 'hover:bg-primary-800 dark:hover:bg-primary-800'
             } focus:outline-none focus:ring-2 focus:ring-primary-700 focus:ring-offset-2 dark:ring-offset-black`}
             type="submit"
             disabled={subscribed}
@@ -66,13 +77,15 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
         </div>
       </form>
       {error && (
-        <div className="pt-2 text-sm text-red-500 w-72 dark:text-red-400 sm:w-96">{message}</div>
+        <div className="pt-2 text-sm text-red-500 w-72 dark:text-red-400 sm:w-96">
+          {message}
+        </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default NewsletterForm
+export default NewsletterForm;
 
 export const BlogNewsletterForm = ({ title }) => (
   <div className="flex items-center justify-center">
@@ -80,4 +93,4 @@ export const BlogNewsletterForm = ({ title }) => (
       <NewsletterForm title={title} />
     </div>
   </div>
-)
+);
