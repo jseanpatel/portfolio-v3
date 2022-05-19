@@ -15,7 +15,7 @@ I'm Jacob. I'm a student studying computer science and education at the Universi
 
 I really hate structure. So, I intend for this blog to be a conduit for my sporradic thoughts, both technical and personal.
 
-Right now I'm travelling Western Europe, and let me tell you this trip is going great. Coming up I've got an opera show, a stay in a monatary and even a day on a nude beach (nude). Come along with me on my travels.
+Right now I'm travelling Western Europe, and let me tell you this trip is going great. Coming up I've got an opera show, a stay in a monastery and even a day on a nude beach (nude). Come along with me on my travels.
 
 Jacob
 
