@@ -34,7 +34,7 @@ export default function PostLayout({
       <article>
         <div>
           <header>
-            <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
+            <div className="pb-10 space-y-1 text-center border-b border-gray-200 dark:border-gray-700">
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>
@@ -49,11 +49,11 @@ export default function PostLayout({
             </div>
           </header>
           <div
-            className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:divide-y-0 "
+            className="pb-8 divide-y divide-gray-200 dark:divide-gray-700 xl:divide-y-0 "
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">
+              <div className="pt-10 pb-8 prose max-w-none dark:prose-dark">
                 {children}
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function PostLayout({
                   <div className="pt-4 xl:pt-8">
                     <Link
                       href={`/blog/${prev.slug}`}
-                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                      className="text-primary-600 hover:text-primary-700 dark:hover:text-primary-400"
                     >
                       &larr; {prev.title}
                     </Link>
@@ -74,7 +74,7 @@ export default function PostLayout({
                   <div className="pt-4 xl:pt-8">
                     <Link
                       href={`/blog/${next.slug}`}
-                      className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                      className="text-primary-600 hover:text-primary-700 dark:hover:text-primary-400"
                     >
                       {next.title} &rarr;
                     </Link>
