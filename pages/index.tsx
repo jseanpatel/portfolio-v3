@@ -22,8 +22,6 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-        <div className="bg-gradient-to-r w-full h-16 rounded-sm from-indigo-500 via-purple-500 to-pink-500 ..."></div>
-
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Latest
           </h1>
@@ -69,7 +67,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                          className="text-primary-600 hover:text-primary-700 dark:hover:text-primary-400"
                           aria-label={`Read "${title}"`}
                         >
                           Read more &rarr;

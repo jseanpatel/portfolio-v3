@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'Jacob Patel Blog',
+  title: 'Jacob Patel - Blog',
   author: 'Jacob Patel',
-  headerTitle: 'Jacob Patel Blog',
+  headerTitle: 'blog.jseanpa.tel',
   description: 'A blog about Spain, software and everything in between',
   language: 'en-us',
   theme: 'system', // system, dark or light

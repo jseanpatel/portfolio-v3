@@ -1,6 +1,6 @@
 ---
 name: Jacob Patel
-avatar: /static/images/avatar.png
+avatar: /static/images/avatar.jpg
 occupation: Student
 company: University of California, Berkeley
 email: jseanpatel@berkeley.edu
@@ -9,8 +9,13 @@ linkedin: https://www.linkedin.com/jseanpatel
 github: https://github.com/jseanpatel
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+Hi there,
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
+I'm Jacob. I'm a student studying computer science and education at the University of California, Berkeley. Welcome to my blog.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I really hate structure. So, I intend for this blog to be a conduit for my sporradic thoughts, both technical and personal.
+
+Right now I'm travelling Western Europe, and let me tell you this trip is going great. Coming up I've got an opera show, a stay in a monatary and even a day on a nude beach (nude). Come along with me on my travels.
+
+Jacob
+
