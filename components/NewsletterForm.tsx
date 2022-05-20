@@ -43,7 +43,9 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
         onSubmit={subscribe}
         data-netlify="true"
         name="subscribe-newsletter"
+        method="POST"
       >
+        <input type="hidden" name="form-name" value="subscribe-newsletter" />
         <div>
           <label className="sr-only" htmlFor="email-input">
             Email address
