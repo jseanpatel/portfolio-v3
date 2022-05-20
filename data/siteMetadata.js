@@ -5,10 +5,10 @@ const siteMetadata = {
   description: 'A blog about Spain, software and everything in between',
   language: 'en-us',
   theme: 'light', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteUrl: 'https://blog.jseanpa.tel',
+  siteRepo: 'https://github.com/jseanpatel/portfolio-blog',
   siteLogo: '/static/images/logo.png',
-  image: '/static/images/avatar.png',
+  image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/twitter-card.png',
   email: 'jseanpatel@gmail.com',
   github: 'https://github.com/jseanpatel',
