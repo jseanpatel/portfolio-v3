@@ -125,7 +125,7 @@ export default function PostLayout({
               <div className="pt-10 pb-8 prose max-w-none dark:prose-dark">
                 {children}
               </div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
+              <div className="pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Comments frontMatter={frontMatter} />
 
                 <Link href={editUrl(fileName)}>View on GitHub</Link>
