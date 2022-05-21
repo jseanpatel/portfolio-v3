@@ -1,20 +1,22 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    title: 'Cylynx',
+    description: `Reimagining compliance and risk screening with solutions powered by network analytics. Exploring better ways to secure the financial system, improve human-machine collaboration and what it means to build a company.`,
+    imgSrc: '/static/img/cylynx-logo.png',
+    href: 'https://www.cylynx.io',
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Tailwind Nextjs Starter Blog',
+    description: `What this blog is based on! I maintain it seperately as a side project. An out of the box personal portfolio template, beautifully styled, completely customisable and built on one of the hottest frontend frameworks.`,
+    imgSrc: '/static/img/demo-twitter-card.png',
+    href: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   },
-]
+  {
+    title: 'Singapore Economy Dashboard',
+    description: `A dashboard covering Singapore's quarterly GDP and employment figures. Programmed in R and plotly. Nothing great technically but it holds a special place in my heart as one of my first creations.`,
+    imgSrc: '/static/img/sg-dashboard-pic.png',
+    href: '/dashboard/sg-dashboard.html',
+  },
+];
 
-export default projectsData
+export default projectsData;
