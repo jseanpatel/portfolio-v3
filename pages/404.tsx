@@ -13,10 +13,11 @@ export default function FourZeroFour() {
           Sorry we couldn&apos;t find this page
         </p>
         <p className="mb-8">
-          But dont worry, you can find plenty of other things on the homepage
+          But don&apos;t worry, you can find plenty of other things on the
+          homepage
         </p>
         <Link href="/">
-          <button className="inline px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 border border-transparent rounded-lg shadow bg-primary-600 focus:shadow-outline-blue hover:bg-blue-700 focus:outline-none dark:hover:bg-blue-500">
+          <button className="inline px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 border border-transparent rounded-lg shadow bg-primary-600 focus:shadow-outline-green hover:bg-green-700 focus:outline-none dark:hover:bg-green-500">
             Back to homepage
           </button>
         </Link>

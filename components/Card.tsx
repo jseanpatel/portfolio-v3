@@ -1,5 +1,5 @@
-import Image from './Image'
-import Link from './Link'
+import Image from './Image';
+import Link from './Link';
 
 const Card = ({ title, description, imgSrc, href }) => (
   <div className="p-4 md md:w-1/2" style={{ maxWidth: '544px' }}>
@@ -38,7 +38,7 @@ const Card = ({ title, description, imgSrc, href }) => (
             title
           )}
         </h2>
-        <p className="mb-3 prose text-gray-500 max-w-none dark:text-gray-400">{description}</p>
+        {/* <p className="mb-3 prose text-gray-500 max-w-none dark:text-gray-400">{description}</p> */}
         {href && (
           <Link
             href={href}
@@ -51,6 +51,6 @@ const Card = ({ title, description, imgSrc, href }) => (
       </div>
     </div>
   </div>
-)
+);
 
-export default Card
+export default Card;

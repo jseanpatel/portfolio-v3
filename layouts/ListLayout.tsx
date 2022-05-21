@@ -3,9 +3,13 @@ import { PostFrontMatter } from 'types/PostFrontMatter';
 
 import formatDate from '@/lib/utils/formatDate';
 
+import siteMetadata from '@/data/siteMetadata';
+
 import Link from '@/components/Link';
+import NewsletterForm from '@/components/NewsletterForm';
 import Pagination from '@/components/Pagination';
 import Tag from '@/components/Tag';
+
 interface Props {
   posts: PostFrontMatter[];
   title: string;
@@ -39,6 +43,9 @@ export default function ListLayout({
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            {siteMetadata.description}
+          </p>
           <div className="relative max-w-lg">
             <input
               aria-label="Search articles"
@@ -108,6 +115,11 @@ export default function ListLayout({
           totalPages={pagination.totalPages}
         />
       )}
+      {/* {siteMetadata.newsletter.provider !== '' && (
+        <div className="flex items-center justify-center pt-4">
+          <NewsletterForm />
+        </div>
+      )} */}
     </>
   );
 }

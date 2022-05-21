@@ -11,10 +11,8 @@ github: https://github.com/jseanpatel
 
 Hi there,
 
-I'm Jacob. I'm a student studying computer science and education at the University of California, Berkeley. Welcome to my blog.
+I am an undergraduate at the University of California, Berkeley majoring in computer science and minoring in education. I am interested in using technology to bridge educational gaps that underrepresented groups face.
 
-I really hate structure. So, I intend for this blog to be a conduit for my sporradic thoughts, both technical and personal.
-
-Right now I'm travelling Western Europe, and let me tell you this trip is going great. Coming up I've got an opera show, a stay in a monastery and even a day on a nude beach (nude). Join me on my travels.
+My goal is expand educational access to all. Let's build something together.
 
 Jacob

@@ -66,10 +66,10 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
         </div>
         <div className="flex w-full mt-2 rounded-md shadow-sm sm:mt-0 sm:ml-3">
           <button
-            className={`w-full rounded-md bg-primary-700 dark:bg-primary-700 py-2 px-4 font-medium text-white sm:py-0 ${
+            className={`w-full rounded-md bg-primary-700 dark:bg-primary-600 py-2 px-4 font-medium text-white sm:py-0 ${
               subscribed
                 ? 'cursor-default'
-                : 'hover:bg-primary-800 dark:hover:bg-primary-800'
+                : 'hover:bg-primary-800 dark:hover:bg-primary-500'
             } focus:outline-none focus:ring-2 focus:ring-primary-700 focus:ring-offset-2 dark:ring-offset-black`}
             type="submit"
             disabled={subscribed}
