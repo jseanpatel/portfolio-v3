@@ -3,9 +3,9 @@ name: Jacob Patel
 avatar: /static/images/avatar.jpg
 occupation: Student
 company: University of California, Berkeley
-email: jseanpatel@berkeley.edu
+email: hello@jseanpa.tel
 twitter: https://twitter.com/jseanpatel
-linkedin: https://www.linkedin.com/jseanpatel
+linkedin: https://www.linkedin.com/in/jseanpatel/
 github: https://github.com/jseanpatel
 ---
 

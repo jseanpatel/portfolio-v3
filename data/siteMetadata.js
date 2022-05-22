@@ -10,7 +10,7 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'jseanpatel@gmail.com',
+  email: 'hello@jseanpa.tel',
   github: 'https://github.com/jseanpatel',
   twitter: 'https://twitter.com/jseanpatel',
   facebook: 'https://facebook.com/jseanpatel',
