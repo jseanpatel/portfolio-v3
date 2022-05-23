@@ -4,7 +4,7 @@ const siteMetadata = {
   headerTitle: 'jseanpa.tel',
   description: 'A blog about Spain, software and everything in between',
   language: 'en-us',
-  theme: 'light', // system, dark or light
+  theme: 'system', // system, dark or light
   siteUrl: 'https://jseanpa.tel',
   siteRepo: 'https://github.com/jseanpatel/portfolio-v3',
   siteLogo: '/static/images/logo.png',

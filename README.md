@@ -6,6 +6,7 @@ _Website for my personal developer portfolio._
 
 - [Description](#description)
 - [Technologies](#technologies)
+- [Acknowledgements](#acknowledgements)
 - [Deployment](#deployment)
 - [License](#license)
 
@@ -21,6 +22,10 @@ This website was built to house my personal projects, information, and interests
 - Node
 - Vercel
 - TailwindCSS
+
+## Acknowledgements
+
+This portfolio was bootstrapped from the [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog). Thank you to the creator Timothy Lin.
 
 ## Deployment
 
