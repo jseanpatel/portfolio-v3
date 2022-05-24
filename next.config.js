@@ -1,10 +1,10 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
-})
+});
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
-  default-src 'self';
+  default-src 'self' 'https://www.google-analytics.com' ;
   script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
@@ -12,7 +12,7 @@ const ContentSecurityPolicy = `
   connect-src *;
   font-src 'self';
   frame-src giscus.app
-`
+`;
 
 const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
@@ -50,7 +50,7 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
-]
+];
 
 /**
  * @type {import('next/dist/next-server/server/config').NextConfig}
@@ -67,7 +67,7 @@ module.exports = withBundleAnalyzer({
         source: '/(.*)',
         headers: securityHeaders,
       },
-    ]
+    ];
   },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
@@ -81,12 +81,12 @@ module.exports = withBundleAnalyzer({
           },
         },
       ],
-    })
+    });
 
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
-    })
+    });
 
     if (!dev && !isServer) {
       // Replace React with Preact only in client production build
@@ -95,9 +95,9 @@ module.exports = withBundleAnalyzer({
         react: 'preact/compat',
         'react-dom/test-utils': 'preact/test-utils',
         'react-dom': 'preact/compat',
-      })
+      });
     }
 
-    return config
+    return config;
   },
-})
+});
