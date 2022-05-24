@@ -4,13 +4,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
-  default-src 'self' 'https://www.google-analytics.com' ;
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app 'https://tagmanager.google.com';
-  style-src 'self' 'unsafe-inline' 'https://tagmanager.google.com' 'https://fonts.googleapis.com';
-  img-src * blob: data: 'https://ssl.gstatic.com' 'https://www.gstatic.com' ;
+  default-src 'self' 'https://www.google-analytics.com' 'https://www.googletagmanager.com';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app;
+  style-src 'self' 'unsafe-inline';
+  img-src * blob: data:;
   media-src 'none';
   connect-src *;
-  font-src 'self 'https://fonts.gstatic.com' data:;
+  font-src 'self';
   frame-src giscus.app
 `;
 
