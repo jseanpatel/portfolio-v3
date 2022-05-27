@@ -19,9 +19,13 @@ export default function Footer() {
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
         </div>
         <div className="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400">
-          <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
           <Link href="/">{siteMetadata.author}</Link>
+          <div>{` • `}</div>
+
+          <div>{`© ${new Date().getFullYear()}`}</div>
+
+          <div>{` • `}</div>
+          <div>{siteMetadata.city}</div>
         </div>
       </div>
     </footer>

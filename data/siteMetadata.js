@@ -1,8 +1,9 @@
 const siteMetadata = {
   title: 'Jacob Patel - Developer Portfolio',
   author: 'Jacob Patel',
+  city: 'Berkeley, California',
   headerTitle: 'jseanpa.tel',
-  description: 'A blog about Spain, software and everything in between',
+  description: 'A blog about travel, software and education',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://jseanpa.tel',
