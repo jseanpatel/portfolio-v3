@@ -1,4 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import useTranslation from 'next-translate/useTranslation';
 import { PostFrontMatter } from 'types/PostFrontMatter';
 
 import { getAllFilesFrontMatter } from '@/lib/mdx';
@@ -17,9 +18,9 @@ export const getStaticProps: GetStaticProps<{
   return { props: { posts } };
 };
 
-export default function Home({
-  posts,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <>
       <PageSEO
@@ -29,7 +30,7 @@ export default function Home({
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pb-8 space-y-2 pt-36 md:pt-48 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-16">
-            Hi there, 👋 I&apos;m Jacob.
+            {t('home:greetings')}
           </h1>
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-16">
             Welcome to my developer portfolio.
