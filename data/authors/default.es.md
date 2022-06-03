@@ -1,0 +1,18 @@
+---
+name: Jacobo Patel Iglesias
+avatar: /static/images/avatar.jpg
+occupation: Estudiante
+company: Universidad de California, Berkeley
+email: hello@jseanpa.tel
+twitter: https://twitter.com/jseanpatel
+linkedin: https://www.linkedin.com/in/jseanpatel/
+github: https://github.com/jseanpatel
+---
+
+Hola,
+
+Soy estudiante de la Universidad de California, Berkeley, con especialización en informática y especialización en educación. Combino instrucción y software de alta calidad para cerrar las brechas educativas que enfrentan los grupos subrepresentados.
+
+Construyamos algo juntos.
+
+Jacobo

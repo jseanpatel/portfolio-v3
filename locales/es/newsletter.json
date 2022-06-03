@@ -1,10 +1,10 @@
 {
-  "mail": "Adresse Mail",
-  "title": "Abonnez-vous à la newsletter",
-  "messageError": "Votre adresse e-mail est invalide ou  déjà inscrite !",
-  "messageSuccess": "Succès ! Vous êtes maintenant abonné. 🎉",
-  "placeholderSucces": "Vous êtes inscrit ! 🎉",
-  "placeholderDefault": "Entrez votre adresse mail",
-  "buttonSuccess": "Merci !",
-  "buttonDefault": "S'inscrire"
+  "correo": "Dirección de correo electrónico",
+  "title": "Suscríbete a la newsletter",
+  "messageError": "¡Tu dirección de correo electrónico no es válida o ya estás suscrito!",
+  "messageSuccess": "¡Con éxito! 🎉 Ahora estás suscrito.",
+  "placeholderSucces": "¡Estás suscrito! 🎉",
+  "placeholderDefault": "Ingrese su correo electrónico",
+  "buttonSuccess": "¡Gracias!",
+  "buttonDefault": "Registrarse"
 }

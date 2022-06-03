@@ -1,7 +1,7 @@
 {
   "mail": "Email address",
   "title": "Subscribe to the newsletter",
-  "messageError": "Your e-mail address is invalid or you are already subscribed!",
+  "messageError": "Your e-mail adress is invalid or you are already subscribed!",
   "messageSuccess": "Successfully! 🎉 You are now subscribed.",
   "placeholderSucces": "You're subscribed !  🎉",
   "placeholderDefault": "Enter your email",

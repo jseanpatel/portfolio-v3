@@ -4,6 +4,7 @@
   "pages": {
     "*": ["common", "headerNavLinks", "newsletter", "404", "SEO"],
     "/projects": ["projects"],
+    "/tags": ["tags"],
     "/": ["home"]
   }
 }

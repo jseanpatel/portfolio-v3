@@ -1,9 +1,13 @@
 const siteMetadata = {
-  title: 'Jacob Patel - Developer Portfolio',
-  author: 'Jacob Patel',
+  title: {
+    en: 'Jacob Patel - Developer Portfolio',
+    es: 'Jacobo Patel Iglesias - Cartera de Desarrolladores',
+  },
+  author: { en: 'Jacob Patel', es: 'Jacobo Patel Iglesias' },
   city: 'Berkeley, California',
-  headerTitle: 'jseanpa.tel',
-  description: 'A blog about travel, software and education',
+  headerTitle: { en: 'Jacob Patel', es: 'Jacobo Patel Iglesias' },
+  // description: 'A blog created with Next.js and Tailwind.css',
+  description: { en: 'English description', es: 'Description en es' },
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://jseanpa.tel',
@@ -14,27 +18,20 @@ const siteMetadata = {
   email: 'hello@jseanpa.tel',
   github: 'https://github.com/jseanpatel',
   twitter: 'https://twitter.com/jseanpatel',
-  facebook: 'https://facebook.com/jseanpatel',
-  youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/in/jseanpatel/',
   locale: 'en-US',
   analytics: {
-    // If you want to use an analytics provider you have to add it to the
-    // content security policy in the `next.config.js` file.
-    // supports plausible, simpleAnalytics, umami or googleAnalytics
+    // supports plausible, simpleAnalytics or googleAnalytics
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
     simpleAnalytics: false, // true or false
-    umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
-    googleAnalyticsId: 'G-7E166NGFCC', // e.g. UA-000000-2 or G-XXXXXXX
+    googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
   },
   newsletter: {
-    // supports mailchimp, buttondown, convertkit, klaviyo
+    // supports mailchimp, buttondown, convertkit
     // Please add your .env file and modify it according to your selection
     provider: 'buttondown',
   },
   comment: {
-    // If you want to use a commenting system other than giscus you have to add it to the
-    // content security policy in the `next.config.js` file.
     // Select a provider and use the environment variables associated to it
     // https://vercel.com/docs/environment-variables
     provider: 'giscus', // supported providers: giscus, utterances, disqus
@@ -76,6 +73,6 @@ const siteMetadata = {
       shortname: process.env.NEXT_PUBLIC_DISQUS_SHORTNAME,
     },
   },
-};
+}
 
-module.exports = siteMetadata;
+module.exports = siteMetadata

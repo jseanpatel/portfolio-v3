@@ -23,6 +23,21 @@
       "@/css/*": ["css/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "data/headerNavLinks.js",
+    "components/Image.js",
+    "pages/_app.js",
+    "pages/404.js",
+    "pages/tags.js",
+    "pages/blog.js",
+    "pages/projects.js",
+    "pages/index.js",
+    "pages/about.js",
+    "pages/tags/[tag].js",
+    "pages/_app.js"
+  ],
   "exclude": ["node_modules"]
 }
