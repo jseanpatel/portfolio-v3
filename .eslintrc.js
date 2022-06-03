@@ -1,73 +1,31 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
-    es2021: true,
+    amd: true,
     node: true,
+    es6: true,
   },
-  plugins: ['@typescript-eslint', 'simple-import-sort'],
   extends: [
     'eslint:recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:prettier/recommended',
     'next',
     'next/core-web-vitals',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
   ],
   rules: {
-    'no-unused-vars': 'off',
-    'no-console': 'warn',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    'react/display-name': 'off',
-    'react/jsx-curly-brace-presence': [
-      'warn',
-      { props: 'never', children: 'never' },
-    ],
-
-    //#region  //*=========== Unused Import ===========
-    '@typescript-eslint/no-var-requires': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
-    //#endregion  //*======== Unused Import ===========
-
-    //#region  //*=========== Import Sort ===========
-    'simple-import-sort/exports': 'warn',
-    'simple-import-sort/imports': [
-      'warn',
+    'prettier/prettier': 'error',
+    'react/react-in-jsx-scope': 'off',
+    'jsx-a11y/anchor-is-valid': [
+      'error',
       {
-        groups: [
-          // ext library & side effect imports
-          ['^@?\\w', '^\\u0000'],
-          // {s}css files
-          ['^.+\\.s?css$'],
-          // Lib and hooks
-          ['^@/lib', '^@/hooks'],
-          // static data
-          ['^@/data'],
-          // components
-          ['^@/components', '^@/container'],
-          // zustand store
-          ['^@/store'],
-          // Other imports
-          ['^@/'],
-          // relative paths up until 3 level
-          [
-            '^\\./?$',
-            '^\\.(?!/?$)',
-            '^\\.\\./?$',
-            '^\\.\\.(?!/?$)',
-            '^\\.\\./\\.\\./?$',
-            '^\\.\\./\\.\\.(?!/?$)',
-            '^\\.\\./\\.\\./\\.\\./?$',
-            '^\\.\\./\\.\\./\\.\\.(?!/?$)',
-          ],
-          ['^@/types'],
-          // other that didnt fit in
-          ['^'],
-        ],
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
       },
     ],
-    //#endregion  //*======== Import Sort ===========
+    'react/prop-types': 0,
+    'no-unused-vars': 0,
+    'react/no-unescaped-entities': 0,
   },
-  globals: {
-    React: true,
-    JSX: true,
-  },
-};
+}

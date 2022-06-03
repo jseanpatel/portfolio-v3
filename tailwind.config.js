@@ -1,21 +1,9 @@
-// @ts-check
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
-/** @type {import("tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
-  experimental: {
-    optimizeUniversalDefaults: true,
-  },
-  content: [
-    './pages/**/*.tsx',
-    './components/**/*.tsx',
-    './layouts/**/*.tsx',
-    './lib/**/*.ts',
-    './data/**/*.mdx',
-  ],
+  mode: 'jit',
+  purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './lib/**/*.js'],
   darkMode: 'class',
   theme: {
     extend: {
@@ -27,6 +15,10 @@ module.exports = {
         12: '3rem',
         13: '3.25rem',
         14: '3.5rem',
+      },
+      transitionDuration: {
+        0: '0ms',
+        2000: '2000ms',
       },
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
