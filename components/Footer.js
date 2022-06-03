@@ -24,8 +24,12 @@ export default function Footer() {
           <div>{siteMetadata.headerTitle[locale]}</div>
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{` • `}</div>
-          <div>{siteMetadata.city}</div>
+          {locale !== 'es' && (
+            <>
+              <div>{` • `}</div>
+              <div>{siteMetadata.city}</div>
+            </>
+          )}
         </div>
       </div>
     </footer>
