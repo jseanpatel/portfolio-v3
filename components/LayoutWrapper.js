@@ -25,19 +25,26 @@ const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
       <div className="flex flex-col justify-between h-screen">
-        <header className="flex items-center justify-between py-10">
+        <header className="flex justify-between py-10">
           <div>
-            <Link href="/" aria-label="Tailwind CSS Blog">
+            <Link href="/" aria-label="Jacob Patel - Developer Portfolio">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle[locale] === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle[locale]}
-                  </div>
+                  <>
+                    <div className="hidden h-6 mb-2 text-2xl font-semibold xl:block">
+                      {siteMetadata.headerTitle[locale]}
+                    </div>
+                    <div className="hidden h-6 mb-1 text-2xl font-semibold md:block xl:hidden">
+                      {siteMetadata.headerTitleShortened[locale]}
+                    </div>
+                  </>
                 ) : (
-                  siteMetadata.headerTitle[locale]
+                  <div className="hidden h-6 text-2xl font-semibold md:block">
+                    siteMetadata.headerTitle[locale]
+                  </div>
                 )}
               </div>
             </Link>

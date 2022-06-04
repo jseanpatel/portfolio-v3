@@ -6,6 +6,7 @@ const siteMetadata = {
   author: { en: 'Jacob Patel', es: 'Jacobo Patel Iglesias' },
   city: 'Berkeley, California',
   headerTitle: { en: 'Jacob Patel', es: 'Jacobo Patel Iglesias' },
+  headerTitleShortened: { en: 'Jacob Patel', es: 'Jacobo Patel' },
   // description: 'A blog created with Next.js and Tailwind.css',
   description: { en: 'English description', es: 'Description en es' },
   language: 'en-us',
