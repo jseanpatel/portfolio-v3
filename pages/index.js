@@ -1,24 +1,20 @@
-import Link from '@/components/Link'
-import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
-import useTranslation from 'next-translate/useTranslation'
+import { PageSEO } from '@/components/SEO';
 
-import NewsletterForm from '@/components/NewsletterForm'
+import siteMetadata from '@/data/siteMetadata';
 
-const MAX_DISPLAY = 5
+import { MDXLayoutRenderer } from '@/components/MDXComponents';
+import { getFileBySlug } from '@/lib/mdx';
+
+const DEFAULT_LAYOUT = 'AuthorLayout';
 
 export async function getStaticProps({ locale, defaultLocale, locales }) {
-  const otherLocale = locale !== defaultLocale ? locale : ''
-  const posts = await getAllFilesFrontMatter('blog', otherLocale)
-
-  return { props: { posts, locale, availableLocales: locales } }
+  const otherLocale = locale !== defaultLocale ? locale : '';
+  const authorDetails = await getFileBySlug('index', 'content', otherLocale);
+  return { props: { authorDetails, availableLocales: locales } };
 }
 
-export default function Home({ posts, locale, availableLocales }) {
-  const { t } = useTranslation()
+export default function Home({ authorDetails, locale, availableLocales }) {
+  const { mdxSource, frontMatter } = authorDetails;
 
   return (
     <>
@@ -27,16 +23,12 @@ export default function Home({ posts, locale, availableLocales }) {
         description={siteMetadata.description[locale]}
         availableLocales={availableLocales}
       />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pb-8 space-y-2 pt-36 md:pt-48 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-16">
-            {t('home:greeting')}
-          </h1>
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-16">
-            {t('home:description')}
-          </h1>
-        </div>
-      </div>
+      <MDXLayoutRenderer
+        layout={frontMatter.layout || DEFAULT_LAYOUT}
+        mdxSource={mdxSource}
+        frontMatter={frontMatter}
+        availableLocales={availableLocales}
+      />
     </>
-  )
+  );
 }

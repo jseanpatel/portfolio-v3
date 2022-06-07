@@ -1,26 +1,26 @@
 /* eslint-disable jsx-a11y/no-onchange */
-import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
-import Link from './Link'
-import SectionContainer from './SectionContainer'
-import Footer from './Footer'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
+import siteMetadata from '@/data/siteMetadata';
+import headerNavLinks from '@/data/headerNavLinks';
+import Logo from '@/data/logo.svg';
+import Link from './Link';
+import SectionContainer from './SectionContainer';
+import Footer from './Footer';
+import MobileNav from './MobileNav';
+import ThemeSwitch from './ThemeSwitch';
 
-import useTranslation from 'next-translate/useTranslation'
-import { useRouter } from 'next/router'
+import useTranslation from 'next-translate/useTranslation';
+import { useRouter } from 'next/router';
 
 const LayoutWrapper = ({ children }) => {
-  const getFlag = { en: '🇺🇸', es: '🇪🇸' }
-  const { t } = useTranslation()
-  const router = useRouter()
-  const { locale, locales, defaultLocale } = router
+  const getFlag = { en: '🇺🇸', es: '🇪🇸' };
+  const { t } = useTranslation();
+  const router = useRouter();
+  const { locale, locales, defaultLocale } = router;
 
   const changeLanguage = (e) => {
-    const locale = e.target.value
-    router.push(router.asPath, router.asPath, { locale })
-  }
+    const locale = e.target.value;
+    router.push(router.asPath, router.asPath, { locale });
+  };
 
   return (
     <SectionContainer>
@@ -65,7 +65,7 @@ const LayoutWrapper = ({ children }) => {
               onChange={changeLanguage}
               defaultValue={locale}
               style={{ textAlignLast: 'center' }}
-              className="text-lg tracking-wide text-gray-900 bg-transparent dark:text-gray-100 text-shadow-sm"
+              className="text-lg tracking-wide text-gray-900 bg-transparent rounded-md dark:text-gray-100 text-shadow-sm"
             >
               {locales.map((e) => (
                 <option className="" value={e} key={e}>
@@ -81,7 +81,7 @@ const LayoutWrapper = ({ children }) => {
         <Footer />
       </div>
     </SectionContainer>
-  )
-}
+  );
+};
 
-export default LayoutWrapper
+export default LayoutWrapper;

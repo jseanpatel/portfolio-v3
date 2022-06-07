@@ -8,7 +8,12 @@ const siteMetadata = {
   headerTitle: { en: 'Jacob Patel', es: 'Jacobo Patel Iglesias' },
   headerTitleShortened: { en: 'Jacob Patel', es: 'Jacobo Patel' },
   // description: 'A blog created with Next.js and Tailwind.css',
-  description: { en: 'English description', es: 'Description en es' },
+  description: {
+    en:
+      "I'm a rising senior at the University of California, Berkeley studying computer science and education, with an emphasis in educational technology.",
+    es:
+      'Soy un estudiante de último año en la Universidad de California, Berkeley, que estudia informática y educación, con énfasis en tecnología educativa.',
+  },
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://jseanpa.tel',
@@ -74,6 +79,6 @@ const siteMetadata = {
       shortname: process.env.NEXT_PUBLIC_DISQUS_SHORTNAME,
     },
   },
-}
+};
 
-module.exports = siteMetadata
+module.exports = siteMetadata;
