@@ -1,19 +1,21 @@
-import siteMetadata from '@/data/siteMetadata'
-import projectsData from '@/data/projectsData'
-import Card from '@/components/Card'
-import { PageSEO } from '@/components/SEO'
-import useTranslation from 'next-translate/useTranslation'
+import siteMetadata from '@/data/siteMetadata';
+import projectsData from '@/data/projectsData';
+import Card from '@/components/Card';
+import { PageSEO } from '@/components/SEO';
+import useTranslation from 'next-translate/useTranslation';
 
 export async function getStaticProps({ locale, locales }) {
-  return { props: { locale, availableLocales: locales } }
+  return { props: { locale, availableLocales: locales } };
 }
 
 export default function Projects({ locale, availableLocales }) {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <>
       <PageSEO
-        title={`${t('headerNavLinks:projects')} - ${siteMetadata.author[locale]}`}
+        title={`${t('headerNavLinks:projects')} - ${
+          siteMetadata.author[locale]
+        }`}
         description={siteMetadata.description[locale]}
         availableLocales={availableLocales}
       />
@@ -22,8 +24,21 @@ export default function Projects({ locale, availableLocales }) {
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-16">
             {t('projects:description')}
           </h1>
+          <div className="container py-12">
+            <div className="flex flex-wrap -m-4">
+              {Array.from(projectsData).map((d) => (
+                <Card
+                  key={d.title}
+                  title={d.title}
+                  description={d.description}
+                  imgSrc={d.imgSrc}
+                  href={d.href}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>
-  )
+  );
 }

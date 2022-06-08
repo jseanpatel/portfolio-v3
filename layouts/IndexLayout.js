@@ -29,7 +29,7 @@ export default function AuthorLayout({
             {t('home:greeting')}
           </h1>
         </div>
-        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
+        <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-24 xl:space-y-0">
           <div className="pt-4 pb-8 text-lg prose dark:prose-dark max-w-none xl:col-span-2">
             {children}
           </div>
