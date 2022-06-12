@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import siteMetadata from '@/data/siteMetadata'
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import siteMetadata from '@/data/siteMetadata';
 
 const generateLinks = (router, availableLocales) =>
   availableLocales.map((locale) => (
@@ -12,16 +12,17 @@ const generateLinks = (router, availableLocales) =>
         // Because the functions should be deterministic, it keep the same(s) link as canonical or alternante
         locale === router.defaultLocale
           ? 'canonical'
-          : !availableLocales.includes(router.defaultLocale) && locale === availableLocales[0]
+          : !availableLocales.includes(router.defaultLocale) &&
+            locale === availableLocales[0]
           ? 'canonical'
           : 'alternate'
       }
       hrefLang={locale}
-      href={`${siteMetadata.siteUrl}${locale === router.defaultLocale ? '' : `/${locale}`}${
-        router.asPath
-      }`}
+      href={`${siteMetadata.siteUrl}${
+        locale === router.defaultLocale ? '' : `/${locale}`
+      }${router.asPath}`}
     />
-  ))
+  ));
 
 // export const PageSeo = ({ title, description, availableLocales }) => {
 //   const router = useRouter()
@@ -51,20 +52,37 @@ const generateLinks = (router, availableLocales) =>
 //   )
 // }
 
-const CommonSEO = ({ title, description, ogType, ogImage, twImage, availableLocales }) => {
-  const router = useRouter()
+const CommonSEO = ({
+  title,
+  description,
+  ogType,
+  ogImage,
+  twImage,
+  availableLocales,
+}) => {
+  const router = useRouter();
+  console.log('title is this:');
+  console.log(title);
   return (
     <Head>
       <title>{title}</title>
       <meta name="robots" content="follow, index" />
       <meta name="description" content={description} />
-      <meta property="og:url" content={`${siteMetadata.siteUrl}${router.asPath}`} />
+      <meta
+        property="og:url"
+        content={`${siteMetadata.siteUrl}${router.asPath}`}
+      />
       <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content={siteMetadata.title[router.locale]} />
+      <meta
+        property="og:site_name"
+        content={siteMetadata.title[router.locale]}
+      />
       <meta property="og:description" content={description} />
       <meta property="og:title" content={title} />
       {ogImage.constructor.name === 'Array' ? (
-        ogImage.map(({ url }) => <meta property="og:image" content={url} key={url} />)
+        ogImage.map(({ url }) => (
+          <meta property="og:image" content={url} key={url} />
+        ))
       ) : (
         <meta property="og:image" content={ogImage} key={ogImage} />
       )}
@@ -72,7 +90,13 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage, availableLoca
       {availableLocales &&
         availableLocales
           .filter((locale) => locale !== router.locale)
-          .map((locale) => <meta key={locale} property="og:locale:alternate" content={locale} />)}
+          .map((locale) => (
+            <meta
+              key={locale}
+              property="og:locale:alternate"
+              content={locale}
+            />
+          ))}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={siteMetadata.twitter} />
       <meta name="twitter:title" content={title} />
@@ -80,8 +104,8 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage, availableLoca
       <meta name="twitter:image" content={twImage} />
       {availableLocales && generateLinks(router, availableLocales)}
     </Head>
-  )
-}
+  );
+};
 
 // export const BlogSeo = ({
 //   authorDetails,
@@ -93,9 +117,14 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage, availableLoca
 //   availableLocales,
 //   images = [],
 // }) => {
-export const PageSEO = ({ title, description, availableLocales }) => {
-  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+export const PageSEO = ({
+  title,
+  ogTitle = title,
+  description,
+  availableLocales,
+}) => {
+  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner;
+  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner;
   return (
     <CommonSEO
       title={title}
@@ -105,13 +134,13 @@ export const PageSEO = ({ title, description, availableLocales }) => {
       twImage={twImageUrl}
       availableLocales={availableLocales}
     />
-  )
-}
+  );
+};
 
 export const TagSEO = ({ title, description, availableLocales }) => {
-  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  const router = useRouter()
+  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner;
+  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner;
+  const router = useRouter();
   return (
     <>
       <CommonSEO
@@ -134,8 +163,8 @@ export const TagSEO = ({ title, description, availableLocales }) => {
         />
       </Head>
     </>
-  )
-}
+  );
+};
 
 export const BlogSEO = ({
   authorDetails,
@@ -147,36 +176,36 @@ export const BlogSEO = ({
   availableLocales,
   images = [],
 }) => {
-  const router = useRouter()
-  const publishedAt = new Date(date).toISOString()
-  const modifiedAt = new Date(lastmod || date).toISOString()
+  const router = useRouter();
+  const publishedAt = new Date(date).toISOString();
+  const modifiedAt = new Date(lastmod || date).toISOString();
   let imagesArr =
     images.length === 0
       ? [siteMetadata.socialBanner]
       : typeof images === 'string'
       ? [images]
-      : images
+      : images;
 
   const featuredImages = imagesArr.map((img) => {
     return {
       '@type': 'ImageObject',
       url: `${siteMetadata.siteUrl}${img}`,
-    }
-  })
+    };
+  });
 
-  let authorList
+  let authorList;
   if (authorDetails) {
     authorList = authorDetails.map((author) => {
       return {
         '@type': 'Person',
         name: author.name,
-      }
-    })
+      };
+    });
   } else {
     authorList = {
       '@type': 'Person',
       name: siteMetadata.author,
-    }
+    };
   }
 
   const structuredData = {
@@ -200,9 +229,9 @@ export const BlogSEO = ({
       },
     },
     description: summary,
-  }
+  };
 
-  const twImageUrl = featuredImages[0].url
+  const twImageUrl = featuredImages[0].url;
 
   return (
     <>
@@ -236,8 +265,12 @@ export const BlogSEO = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={summary} />
         <meta name="twitter:image" content={featuredImages[0].url} /> */}
-        {date && <meta property="article:published_time" content={publishedAt} />}
-        {lastmod && <meta property="article:modified_time" content={modifiedAt} />}
+        {date && (
+          <meta property="article:published_time" content={publishedAt} />
+        )}
+        {lastmod && (
+          <meta property="article:modified_time" content={modifiedAt} />
+        )}
         {availableLocales && generateLinks(router, availableLocales)}
         <script
           type="application/ld+json"
@@ -247,5 +280,5 @@ export const BlogSEO = ({
         />
       </Head>
     </>
-  )
-}
+  );
+};
