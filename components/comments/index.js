@@ -35,6 +35,9 @@ const Comments = ({ frontMatter }) => {
     case 'title':
       term = frontMatter.ogtitle;
       break;
+    case 'og:title':
+      term = frontMatter.ogtitle;
+      break;
   }
   return (
     <div id="comment">
