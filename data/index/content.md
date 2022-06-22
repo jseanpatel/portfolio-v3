@@ -19,6 +19,6 @@ Over the next three years and 1900 commits, I enjoyed a smorgasbord of technical
 
 Now that I'm an undergraduate, the majority of time is spent making software to help facilitate learning that sticks. I do this mostly through my freelance website design company: [Ladder Designs](https://ladderdesigns.co). Right now we're closing PR's on an [online tabulation system](https://atabical.calmocktrial.com/), which we're building so undergraduate [mock trial](https://www.collegemocktrial.org/) teams can track tournament information more efficiently.
 
-I love to meet new people. Feel free to reach me at [hello@jseanpa.tel](mailto:hello@jseanpa.tel). Also since you're here, stop by my [blog](./blog) and let me know what you think.
+I love to meet new people. Feel free to reach me at [hello@jseanpa.tel](mailto:hello@jseanpa.tel) or check out my [resume](https://drive.google.com/open?id=1zn7AY7H7qoi3dBHJk6UciWDOOvsibOyN). Also since you're here, stop by my [blog](./blog) and let me know what you think.
 
 Let's build something together.
