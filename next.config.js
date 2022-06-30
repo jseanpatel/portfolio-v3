@@ -1,8 +1,8 @@
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
-})
+});
 
-const nextTranslate = require('next-translate')
+const nextTranslate = require('next-translate');
 
 module.exports = nextTranslate(
   withBundleAnalyzer({
@@ -10,6 +10,28 @@ module.exports = nextTranslate(
     pageExtensions: ['js', 'jsx', 'md', 'mdx'],
     eslint: {
       dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
+    },
+    async redirects() {
+      return [
+        {
+          source: '/resume',
+          destination:
+            'https://drive.google.com/file/d/1zn7AY7H7qoi3dBHJk6UciWDOOvsibOyN/view',
+          permanent: true,
+        },
+        {
+          source: '/curriculum',
+          destination:
+            'https://drive.google.com/file/d/1zn7AY7H7qoi3dBHJk6UciWDOOvsibOyN/view',
+          permanent: true,
+        },
+        {
+          source: '/cv',
+          destination:
+            'https://drive.google.com/file/d/1zn7AY7H7qoi3dBHJk6UciWDOOvsibOyN/view',
+          permanent: true,
+        },
+      ];
     },
     experimental: { esmExternals: true },
     webpack: (config, { dev, isServer }) => {
@@ -24,12 +46,12 @@ module.exports = nextTranslate(
             },
           },
         ],
-      })
+      });
 
       config.module.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
-      })
+      });
 
       if (!dev && !isServer) {
         // Replace React with Preact only in client production build
@@ -37,10 +59,9 @@ module.exports = nextTranslate(
           react: 'preact/compat',
           'react-dom/test-utils': 'preact/test-utils',
           'react-dom': 'preact/compat',
-        })
+        });
       }
-
-      return config
+      return config;
     },
-  })
-)
+  }),
+);
