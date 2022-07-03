@@ -7,6 +7,7 @@ email: hello@jseanpa.tel
 twitter: https://twitter.com/jseanpatel
 linkedin: https://www.linkedin.com/in/jseanpatel/
 github: https://github.com/jseanpatel
+resume: https://drive.google.com/open?id=1zn7AY7H7qoi3dBHJk6UciWDOOvsibOyN
 ---
 
 Hi there,

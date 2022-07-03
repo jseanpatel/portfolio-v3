@@ -61,8 +61,6 @@ const CommonSEO = ({
   availableLocales,
 }) => {
   const router = useRouter();
-  console.log('title is this:');
-  console.log(title);
   return (
     <Head>
       <title>{title}</title>

@@ -1,21 +1,27 @@
-import Link from './Link'
-import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/social-icons'
-import { useRouter } from 'next/router'
+import Link from './Link';
+import siteMetadata from '@/data/siteMetadata';
+import SocialIcon from '@/components/social-icons';
+import { useRouter } from 'next/router';
 
 export default function Footer() {
-  const router = useRouter()
-  const { locale, locales, defaultLocale } = router
+  const router = useRouter();
+  const { locale, locales, defaultLocale } = router;
 
   const changeLanguage = (e) => {
-    const locale = e.target.value
-  }
+    const locale = e.target.value;
+  };
 
   return (
     <footer>
       <div className="flex flex-col items-center mt-16">
         <div className="flex mb-3 space-x-4">
-          <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />
+          <SocialIcon kind="resume" href={siteMetadata.resume} size="6" />
+
+          <SocialIcon
+            kind="mail"
+            href={`mailto:${siteMetadata.email}`}
+            size="6"
+          />
           <SocialIcon kind="github" href={siteMetadata.github} size="6" />
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="6" />
           <SocialIcon kind="twitter" href={siteMetadata.twitter} size="6" />
@@ -24,8 +30,12 @@ export default function Footer() {
           <div>{siteMetadata.headerTitle[locale]}</div>
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
-          <div className={` ${locale === 'es' ? 'hidden sm:block' : ''}`}>{` • `}</div>
-          <div className={` ${locale === 'es' ? 'hidden sm:block' : ''}`}>{siteMetadata.city}</div>
+          <div
+            className={` ${locale === 'es' ? 'hidden sm:block' : ''}`}
+          >{` • `}</div>
+          <div className={` ${locale === 'es' ? 'hidden sm:block' : ''}`}>
+            {siteMetadata.city}
+          </div>
           {/* {locale !== 'es' && (
             <>
               <div>{` • `}</div>
@@ -35,5 +45,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

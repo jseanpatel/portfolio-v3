@@ -25,6 +25,7 @@ const siteMetadata = {
   github: 'https://github.com/jseanpatel',
   twitter: 'https://twitter.com/jseanpatel',
   linkedin: 'https://www.linkedin.com/in/jseanpatel/',
+  resume: 'https://drive.google.com/open?id=1zn7AY7H7qoi3dBHJk6UciWDOOvsibOyN',
   locale: 'en-US',
   analytics: {
     // supports plausible, simpleAnalytics or googleAnalytics
