@@ -3,7 +3,7 @@ name: Jacob Patel
 layout: IndexLayout
 ---
 
-I'm a rising senior at the University of California, Berkeley studying computer science and education, with an emphasis in educational technology. I'm a dual Spanish-American citizen and I split time growing up in [Redding, CA](https://en.wikipedia.org/wiki/Redding,_California) and [Orense, España](https://es.wikipedia.org/wiki/Orense).
+I'm a rising senior at the [University of California, Berkeley](https://www.berkeley.edu/) studying computer science and education, with an emphasis in educational technology. I'm a dual Spanish-American citizen and I split time growing up in [Redding, CA](https://en.wikipedia.org/wiki/Redding,_California) and [Orense, España](https://es.wikipedia.org/wiki/Orense).
 
 In 2016, I ran `git commit -m "first commit"` on the following lines:
 

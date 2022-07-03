@@ -3,7 +3,7 @@ name: Jacobo Patel Iglesias
 layout: IndexLayout
 ---
 
-Soy un estudiante de último año en la Universidad de California, Berkeley, que estudia informática y educación, con énfasis en tecnología educativa. Soy ciudadano hispanoamericano dual y dividí el tiempo creciendo en [Redding, CA](https://en.wikipedia.org/wiki/Redding,_California) y [Orense, España](https://es.wikipedia.org/wiki/Orense).
+Soy un estudiante de último año en la [Universidad de California, Berkeley](https://www.berkeley.edu/), que estudia informática y educación, con énfasis en tecnología educativa. Soy ciudadano hispanoamericano dual y dividí el tiempo creciendo en [Redding, CA](https://en.wikipedia.org/wiki/Redding,_California) y [Orense, España](https://es.wikipedia.org/wiki/Orense).
 
 En 2016, ejecuté `git commit -m "primer commit"` en las siguientes líneas:
 
