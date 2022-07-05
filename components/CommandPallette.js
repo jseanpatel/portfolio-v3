@@ -42,6 +42,12 @@ const CommandPallette = () => {
             href: '/blog',
           },
           {
+            id: 'tags',
+            children: 'Tags',
+            icon: 'HashtagIcon',
+            href: '/tags',
+          },
+          {
             id: 'about',
             children: 'About',
             icon: 'InformationCircleIcon',
