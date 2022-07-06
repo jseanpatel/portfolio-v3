@@ -187,7 +187,6 @@ function CommandBar() {
     boxSizing: 'border-box',
     outline: 'none',
     border: 'none',
-    // background: 'rgb(28 28 29)',
   };
 
   const animatorStyle = {
@@ -261,14 +260,13 @@ const ResultItem = React.forwardRef(
     return (
       <div
         ref={ref}
-        className={` ${
-          active ? 'bg-gray-200 dark:bg-gray-700' : 'bg-transparent'
+        className={`border-l-2 ${
+          active
+            ? 'bg-gray-200 dark:bg-gray-700 dark:border-white border-gray-700'
+            : 'bg-transparent border-transparent '
         }`}
         style={{
           padding: '12px 16px',
-          borderLeft: `2px solid ${
-            active ? 'rgba(252 252 252 / 0.9)' : 'transparent'
-          }`,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
