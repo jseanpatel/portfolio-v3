@@ -1,4 +1,7 @@
 import * as React from 'react';
+import { useRouter } from 'next/router';
+import SocialIcon from '@/components/social-icons';
+import siteMetadata from '@/data/siteMetadata';
 
 import {
   ActionId,
@@ -11,7 +14,6 @@ import {
   createAction,
   useMatches,
 } from 'kbar';
-import { Switch, Route, Redirect } from 'react-router-dom';
 
 const searchStyle = {
   padding: '12px 16px',
@@ -20,18 +22,18 @@ const searchStyle = {
   boxSizing: 'border-box',
   outline: 'none',
   border: 'none',
-  background: 'var(--background)',
-  color: 'var(--foreground)',
+  background: 'rgb(28 28 29)',
+  color: 'rgba(252 252 252 / 0.9))',
 };
 
 const animatorStyle = {
   maxWidth: '600px',
   width: '100%',
-  background: 'var(--background)',
-  color: 'var(--foreground)',
+  background: 'rgb(28 28 29)',
+  color: 'rgba(252 252 252 / 0.9)',
   borderRadius: '8px',
   overflow: 'hidden',
-  boxShadow: 'var(--shadow)',
+  boxShadow: 'rgb(0 0 0 / 50%) 0px 16px 70px',
 };
 
 const groupNameStyle = {
@@ -42,48 +44,116 @@ const groupNameStyle = {
 };
 
 const App = () => {
+  const router = useRouter();
+
   const initialActions = [
+    // SECTION: NAVIGATION
     {
       id: 'homeAction',
       name: 'Home',
       shortcut: ['h'],
-      keywords: 'back',
+      keywords: 'back landing',
       section: 'Navigation',
-      perform: () => history.push('/'),
-      icon: <HomeIcon />,
-      subtitle: 'Subtitles can help add more context.',
+      perform: () => router.push('/'),
+      icon: <SocialIcon kind="home" href={'/'} size="5" />,
+      subtitle: 'Jacob Patel',
     },
     {
-      id: 'docsAction',
-      name: 'Docs',
-      shortcut: ['g', 'd'],
-      keywords: 'help',
+      id: 'projectsAction',
+      name: 'Projects',
+      shortcut: ['p', 'r'],
+      keywords: 'work publications websites',
       section: 'Navigation',
-      perform: () => history.push('/docs'),
+      perform: () => router.push('/projects'),
     },
     {
-      id: 'contactAction',
-      name: 'Contact',
-      shortcut: ['c'],
-      keywords: 'email hello',
+      id: 'blogAction',
+      name: 'Blog',
+      shortcut: ['b', 'l'],
+      keywords: 'posts travel spain',
       section: 'Navigation',
-      perform: () => window.open('mailto:timchang@hey.com', '_blank'),
+      perform: () => router.push('/blog'),
+    },
+    {
+      id: 'tagsAction',
+      name: 'Tags',
+      shortcut: ['t', 'g'],
+      keywords: 'hashtags',
+      section: 'Navigation',
+      perform: () => router.push('/tags'),
+    },
+    {
+      id: 'aboutAction',
+      name: 'About',
+      shortcut: ['a', 'b'],
+      keywords: 'information biography',
+      section: 'Navigation',
+      perform: () => router.push('/about'),
+    },
+    // SECTION: SOCIAL
+    {
+      id: 'resumeAction',
+      name: 'Resume',
+      shortcut: ['r', 'e'],
+      keywords: 'cv curriculum',
+      section: 'Social',
+      perform: () => router.push(siteMetadata.resume),
+      icon: <SocialIcon kind="resume" href={siteMetadata.resume} size="5" />,
+    },
+    {
+      id: 'emailAction',
+      name: 'Email',
+      shortcut: ['e', 'm'],
+      keywords: 'gmail address inbox',
+      section: 'Social',
+      perform: () => router.push(siteMetadata.email),
+      icon: (
+        <SocialIcon
+          kind="mail"
+          href={`mailto:${siteMetadata.email}`}
+          size="5"
+        />
+      ),
+    },
+    {
+      id: 'githubAction',
+      name: 'GitHub',
+      shortcut: ['g', 'h'],
+      keywords: 'work publications websites',
+      section: 'Social',
+      icon: <SocialIcon kind="github" href={siteMetadata.github} size="5" />,
+      perform: () => router.push(siteMetadata.github),
+    },
+    {
+      id: 'linkedinAction',
+      name: 'LinkedIn',
+      shortcut: ['l', 'i'],
+      keywords: 'work publications biography',
+      section: 'Social',
+      icon: (
+        <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="5" />
+      ),
+      perform: () => router.push(siteMetadata.linkedin),
     },
     {
       id: 'twitterAction',
       name: 'Twitter',
-      shortcut: ['g', 't'],
-      keywords: 'social contact dm',
-      section: 'Navigation',
-      perform: () => window.open('https://twitter.com/timcchang', '_blank'),
+      shortcut: ['t', 'w'],
+      keywords: 'tweets takes',
+      section: 'Social',
+      icon: <SocialIcon kind="twitter" href={siteMetadata.twitter} size="5" />,
+      perform: () => router.push(siteMetadata.twitter),
     },
-    createAction({
-      name: 'Github',
-      shortcut: ['g', 'h'],
-      keywords: 'sourcecode',
-      section: 'Navigation',
-      perform: () => window.open('https://github.com/timc1/kbar', '_blank'),
-    }),
+    // SECTION: OTHER
+    {
+      id: 'privacyPolicyAction',
+      name: 'Privacy Policy',
+      shortcut: ['p', 'o'],
+      keywords: 'privacy statement',
+      section: 'Other',
+      icon: <SocialIcon kind="globe" href={'/'} size="5" />,
+      perform: () => router.push('/'),
+    },
   ];
 
   return (
@@ -152,9 +222,9 @@ const ResultItem = React.forwardRef(
         ref={ref}
         style={{
           padding: '12px 16px',
-          background: active ? 'var(--a1)' : 'transparent',
+          background: active ? 'rgb(53 53 54' : 'transparent',
           borderLeft: `2px solid ${
-            active ? 'var(--foreground)' : 'transparent'
+            active ? 'rgba(252 252 252 / 0.9)' : 'transparent'
           }`,
           display: 'flex',
           alignItems: 'center',
@@ -226,14 +296,3 @@ const ResultItem = React.forwardRef(
 );
 
 export default App;
-
-function HomeIcon() {
-  return (
-    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="m19.681 10.406-7.09-6.179a.924.924 0 0 0-1.214.002l-7.06 6.179c-.642.561-.244 1.618.608 1.618.51 0 .924.414.924.924v5.395c0 .51.414.923.923.923h3.236V14.54c0-.289.234-.522.522-.522h2.94c.288 0 .522.233.522.522v4.728h3.073c.51 0 .924-.413.924-.923V12.95c0-.51.413-.924.923-.924h.163c.853 0 1.25-1.059.606-1.62Z"
-        fill="var(--foreground)"
-      />
-    </svg>
-  );
-}
