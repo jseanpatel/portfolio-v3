@@ -1,6 +1,11 @@
 {
+  "home": "Home",
   "projects": "Projects",
   "blog": "Blog",
   "tags": "Tags",
-  "about": "About"
+  "about": "About",
+  "privacyPolicy": "Privacy Policy",
+  "navigation": "Navigation",
+  "social": "Social",
+  "other": "Other"
 }

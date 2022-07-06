@@ -1,6 +1,11 @@
 {
+  "home": "Casa",
   "projects": "Proyectos",
   "blog": "Blog",
   "tags": "Etiquetas",
-  "about": "Sobre"
+  "about": "Sobre",
+  "privacyPolicy": "Política de Privacidad",
+  "navigation": "Navegación",
+  "social": "Social",
+  "other": "Otro"
 }

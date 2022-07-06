@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useRouter } from 'next/router';
 import SocialIcon from '@/components/social-icons';
 import siteMetadata from '@/data/siteMetadata';
+import useTranslation from 'next-translate/useTranslation';
 
 import {
   ActionId,
@@ -45,67 +46,73 @@ const groupNameStyle = {
 
 const App = () => {
   const router = useRouter();
+  const { locale, locales, defaultLocale } = router;
+  const { t } = useTranslation();
+
+  const navigationSection = t('headerNavLinks:navigation');
+  const socialsSection = t('headerNavLinks:social');
+  const otherSection = t('headerNavLinks:other');
 
   const initialActions = [
     // SECTION: NAVIGATION
     {
       id: 'homeAction',
-      name: 'Home',
+      name: t('headerNavLinks:home'),
       shortcut: ['h'],
       keywords: 'back landing',
-      section: 'Navigation',
+      section: navigationSection,
       perform: () => router.push('/'),
       icon: <SocialIcon kind="home" href={'/'} size="5" />,
-      subtitle: 'Jacob Patel',
+      subtitle: siteMetadata.headerTitle[locale],
     },
     {
       id: 'projectsAction',
-      name: 'Projects',
+      name: t('headerNavLinks:projects'),
       shortcut: ['p', 'r'],
       keywords: 'work publications websites',
-      section: 'Navigation',
+      section: navigationSection,
       perform: () => router.push('/projects'),
     },
     {
       id: 'blogAction',
-      name: 'Blog',
+      name: t('headerNavLinks:blog'),
       shortcut: ['b', 'l'],
       keywords: 'posts travel spain',
-      section: 'Navigation',
+      section: navigationSection,
       perform: () => router.push('/blog'),
     },
     {
       id: 'tagsAction',
-      name: 'Tags',
+      name: t('headerNavLinks:tags'),
       shortcut: ['t', 'g'],
       keywords: 'hashtags',
-      section: 'Navigation',
+      section: navigationSection,
       perform: () => router.push('/tags'),
     },
     {
       id: 'aboutAction',
-      name: 'About',
+      name: t('headerNavLinks:about'),
       shortcut: ['a', 'b'],
       keywords: 'information biography',
-      section: 'Navigation',
+      section: navigationSection,
       perform: () => router.push('/about'),
     },
     // SECTION: SOCIAL
     {
       id: 'resumeAction',
-      name: 'Resume',
+      name: t('social:resume'),
       shortcut: ['r', 'e'],
       keywords: 'cv curriculum',
-      section: 'Social',
+      section: socialsSection,
       perform: () => router.push(siteMetadata.resume),
       icon: <SocialIcon kind="resume" href={siteMetadata.resume} size="5" />,
     },
     {
       id: 'emailAction',
-      name: 'Email',
+      name: t('social:email'),
       shortcut: ['e', 'm'],
       keywords: 'gmail address inbox',
-      section: 'Social',
+      section: socialsSection,
       perform: () => router.push(siteMetadata.email),
       icon: (
         <SocialIcon
@@ -120,7 +127,7 @@ const App = () => {
       name: 'GitHub',
       shortcut: ['g', 'h'],
       keywords: 'work publications websites',
-      section: 'Social',
+      section: socialsSection,
       icon: <SocialIcon kind="github" href={siteMetadata.github} size="5" />,
       perform: () => router.push(siteMetadata.github),
     },
@@ -129,7 +136,7 @@ const App = () => {
       name: 'LinkedIn',
       shortcut: ['l', 'i'],
       keywords: 'work publications biography',
-      section: 'Social',
+      section: socialsSection,
       icon: (
         <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="5" />
       ),
@@ -140,17 +147,17 @@ const App = () => {
       name: 'Twitter',
       shortcut: ['t', 'w'],
       keywords: 'tweets takes',
-      section: 'Social',
+      section: socialsSection,
       icon: <SocialIcon kind="twitter" href={siteMetadata.twitter} size="5" />,
       perform: () => router.push(siteMetadata.twitter),
     },
     // SECTION: OTHER
     {
       id: 'privacyPolicyAction',
-      name: 'Privacy Policy',
+      name: t('headerNavLinks:privacyPolicy'),
       shortcut: ['p', 'o'],
       keywords: 'privacy statement',
-      section: 'Other',
+      section: otherSection,
       icon: <SocialIcon kind="globe" href={'/'} size="5" />,
       perform: () => router.push('/'),
     },
