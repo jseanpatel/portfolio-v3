@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import SocialIcon from '@/components/social-icons';
 import siteMetadata from '@/data/siteMetadata';
 import useTranslation from 'next-translate/useTranslation';
+import { useTheme } from 'next-themes';
 
 import {
   ActionId,
@@ -16,36 +17,9 @@ import {
   useMatches,
 } from 'kbar';
 
-const searchStyle = {
-  padding: '12px 16px',
-  fontSize: '16px',
-  width: '100%',
-  boxSizing: 'border-box',
-  outline: 'none',
-  border: 'none',
-  background: 'rgb(28 28 29)',
-  color: 'rgba(252 252 252 / 0.9))',
-};
-
-const animatorStyle = {
-  maxWidth: '600px',
-  width: '100%',
-  background: 'rgb(28 28 29)',
-  color: 'rgba(252 252 252 / 0.9)',
-  borderRadius: '8px',
-  overflow: 'hidden',
-  boxShadow: 'rgb(0 0 0 / 50%) 0px 16px 70px',
-};
-
-const groupNameStyle = {
-  padding: '8px 16px',
-  fontSize: '10px',
-  textTransform: 'uppercase',
-  opacity: 0.5,
-};
-
 const App = () => {
   const router = useRouter();
+  const { setTheme } = useTheme();
   const { locale, locales, defaultLocale } = router;
   const { t } = useTranslation();
 
@@ -97,6 +71,7 @@ const App = () => {
       section: navigationSection,
       perform: () => router.push('/about'),
     },
+
     // SECTION: SOCIAL
     {
       id: 'resumeAction',
@@ -161,6 +136,33 @@ const App = () => {
       icon: <SocialIcon kind="globe" href={'/'} size="5" />,
       perform: () => router.push('/'),
     },
+    {
+      id: 'theme',
+      name: 'Change theme...',
+      icon: <SocialIcon kind="switch" href={'/'} size="5" />,
+      shortcut: ['c', 't'],
+      section: 'Other',
+    },
+    // SECTION: THEME
+    {
+      id: 'light',
+      name: 'Light',
+      section: '',
+      keywords: 'light theme day',
+      icon: <SocialIcon kind="sun" href={'/'} size="5" />,
+      parent: 'theme',
+      perform: () => setTheme('light'),
+    },
+    {
+      id: 'dark',
+      name: 'Dark',
+      section: '',
+      keywords: 'dark theme night',
+      icon: <SocialIcon kind="moon" href={'/'} size="5" />,
+
+      parent: 'theme',
+      perform: () => setTheme('dark'),
+    },
   ];
 
   return (
@@ -176,6 +178,27 @@ const App = () => {
 };
 
 function CommandBar() {
+  const searchStyle = {
+    padding: '12px 16px',
+    fontSize: '16px',
+    width: '100%',
+    boxSizing: 'border-box',
+    outline: 'none',
+    border: 'none',
+    background: 'rgb(28 28 29)',
+    color: 'rgba(252 252 252 / 0.9))',
+  };
+
+  const animatorStyle = {
+    maxWidth: '600px',
+    width: '100%',
+    background: 'rgb(28 28 29)',
+    color: 'rgba(252 252 252 / 0.9)',
+    borderRadius: '8px',
+    overflow: 'hidden',
+    boxShadow: 'rgb(0 0 0 / 50%) 0px 16px 70px',
+  };
+
   return (
     <KBarPortal>
       <KBarPositioner>
@@ -190,6 +213,13 @@ function CommandBar() {
 
 function RenderResults() {
   const { results, rootActionId } = useMatches();
+
+  const groupNameStyle = {
+    padding: '8px 16px',
+    fontSize: '10px',
+    textTransform: 'uppercase',
+    opacity: 0.5,
+  };
 
   return (
     <KBarResults
@@ -229,7 +259,7 @@ const ResultItem = React.forwardRef(
         ref={ref}
         style={{
           padding: '12px 16px',
-          background: active ? 'rgb(53 53 54' : 'transparent',
+          background: active ? 'rgb(53 53 54)' : 'transparent',
           borderLeft: `2px solid ${
             active ? 'rgba(252 252 252 / 0.9)' : 'transparent'
           }`,
