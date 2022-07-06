@@ -16,16 +16,17 @@ import {
   createAction,
   useMatches,
 } from 'kbar';
+import { useEffect } from 'react';
 
 const App = () => {
   const router = useRouter();
   const { setTheme } = useTheme();
   const { locale, locales, defaultLocale } = router;
-  const { t } = useTranslation();
+  let { t } = useTranslation();
 
-  const navigationSection = t('headerNavLinks:navigation');
-  const socialsSection = t('headerNavLinks:social');
-  const otherSection = t('headerNavLinks:other');
+  const navigationSection = t('commandPalette:navigation');
+  const socialsSection = t('commandPalette:social');
+  const otherSection = t('commandPalette:other');
 
   const initialActions = [
     // SECTION: NAVIGATION
@@ -127,26 +128,27 @@ const App = () => {
       perform: () => router.push(siteMetadata.twitter),
     },
     // SECTION: OTHER
+
+    {
+      id: 'theme',
+      name: t('commandPalette:changeTheme'),
+      icon: <SocialIcon kind="switch" href={'/'} size="5" />,
+      shortcut: ['c', 't'],
+      section: otherSection,
+    },
     {
       id: 'privacyPolicyAction',
-      name: t('headerNavLinks:privacyPolicy'),
-      shortcut: ['p', 'o'],
+      name: t('commandPalette:privacyPolicy'),
+      shortcut: ['p', 'p'],
       keywords: 'privacy statement',
       section: otherSection,
       icon: <SocialIcon kind="globe" href={'/'} size="5" />,
       perform: () => router.push('/'),
     },
-    {
-      id: 'theme',
-      name: 'Change theme...',
-      icon: <SocialIcon kind="switch" href={'/'} size="5" />,
-      shortcut: ['c', 't'],
-      section: 'Other',
-    },
     // SECTION: THEME
     {
       id: 'light',
-      name: 'Light',
+      name: t('commandPalette:light'),
       section: '',
       keywords: 'light theme day',
       icon: <SocialIcon kind="sun" href={'/'} size="5" />,
@@ -155,7 +157,7 @@ const App = () => {
     },
     {
       id: 'dark',
-      name: 'Dark',
+      name: t('commandPalette:dark'),
       section: '',
       keywords: 'dark theme night',
       icon: <SocialIcon kind="moon" href={'/'} size="5" />,
@@ -185,26 +187,28 @@ function CommandBar() {
     boxSizing: 'border-box',
     outline: 'none',
     border: 'none',
-    background: 'rgb(28 28 29)',
-    color: 'rgba(252 252 252 / 0.9))',
+    // background: 'rgb(28 28 29)',
   };
 
   const animatorStyle = {
     maxWidth: '600px',
     width: '100%',
-    background: 'rgb(28 28 29)',
-    color: 'rgba(252 252 252 / 0.9)',
     borderRadius: '8px',
     overflow: 'hidden',
-    boxShadow: 'rgb(0 0 0 / 50%) 0px 16px 70px',
   };
 
   return (
     <KBarPortal>
       <KBarPositioner>
-        <KBarAnimator style={animatorStyle}>
-          <KBarSearch style={searchStyle} />
-          <RenderResults />
+        <KBarAnimator
+          style={animatorStyle}
+          className="text-gray-700 bg-white shadow-2xl dark:bg-commandPalette dark:text-white"
+        >
+          <KBarSearch
+            style={searchStyle}
+            className="text-gray-700 bg-gray-200 dark:bg-gray-700 dark:text-white"
+          />
+          <RenderResults className="" />
         </KBarAnimator>
       </KBarPositioner>
     </KBarPortal>
@@ -257,9 +261,11 @@ const ResultItem = React.forwardRef(
     return (
       <div
         ref={ref}
+        className={` ${
+          active ? 'bg-gray-200 dark:bg-gray-700' : 'bg-transparent'
+        }`}
         style={{
           padding: '12px 16px',
-          background: active ? 'rgb(53 53 54)' : 'transparent',
           borderLeft: `2px solid ${
             active ? 'rgba(252 252 252 / 0.9)' : 'transparent'
           }`,
