@@ -5,5 +5,17 @@
   "changeTheme": "Cambiar de tema...",
   "light": "Luz",
   "dark": "Oscuro",
-  "other": "Otro"
+  "other": "Otro",
+  "homeKeywords": "atrás aterrizaje",
+  "projectsKeywords": "sitios publicaciones trabajo",
+  "blogKeywords": "posts articulos viajes españa",
+  "tagsKeywords": "etiquetas hashtag",
+  "aboutKeywords": "biografía información",
+  "resumeKeywords": "currículum cv",
+  "emailKeywords": "bandeja dirección gmail",
+  "githubKeywords": "sitios web publicaciones trabajo",
+  "linkedinKeywords": "trabajo publicaciones biografia",
+  "twitterKeywords": "tweets opiniones",
+  "lightKeywords": "día tema luz",
+  "darkKeywords": "noche tema oscuro"
 }

@@ -5,5 +5,17 @@
   "changeTheme": "Change theme...",
   "light": "Light",
   "dark": "Dark",
-  "other": "Other"
+  "other": "Other",
+  "homeKeywords": "back landing",
+  "projectsKeywords": "work publications websites",
+  "blogKeywords": "posts articles travel spain",
+  "tagsKeywords": "tags",
+  "aboutKeywords": "biography information",
+  "resumeKeywords": "cv curriculum",
+  "emailKeywords": "inbox address gmail",
+  "githubKeywords": "work publications websites",
+  "linkedinKeywords": "work publications biography",
+  "twitterKeywords": "tweets opinions takes",
+  "lightKeywords": "light theme day",
+  "darkKeywords": "dark theme night"
 }

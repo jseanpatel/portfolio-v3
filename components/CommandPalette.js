@@ -13,7 +13,6 @@ import {
   KBarPositioner,
   KBarSearch,
   KBarResults,
-  createAction,
   useMatches,
 } from 'kbar';
 import { useEffect } from 'react';
@@ -21,7 +20,7 @@ import { useEffect } from 'react';
 const App = () => {
   const router = useRouter();
   const { setTheme } = useTheme();
-  const { locale, locales, defaultLocale } = router;
+  const { locale } = router;
   let { t } = useTranslation();
 
   const navigationSection = t('commandPalette:navigation');
@@ -34,7 +33,7 @@ const App = () => {
       id: 'homeAction',
       name: t('headerNavLinks:home'),
       shortcut: ['h'],
-      keywords: 'back landing',
+      keywords: t('commandPalette:homeKeywords'),
       section: navigationSection,
       perform: () => router.push('/'),
       icon: <SocialIcon kind="home" href={'/'} size="5" />,
@@ -44,7 +43,7 @@ const App = () => {
       id: 'projectsAction',
       name: t('headerNavLinks:projects'),
       shortcut: ['p', 'r'],
-      keywords: 'work publications websites',
+      keywords: t('commandPalette:projectsKeywords'),
       section: navigationSection,
       perform: () => router.push('/projects'),
     },
@@ -52,7 +51,7 @@ const App = () => {
       id: 'blogAction',
       name: t('headerNavLinks:blog'),
       shortcut: ['b', 'l'],
-      keywords: 'posts travel spain',
+      keywords: t('commandPalette:blogKeywords'),
       section: navigationSection,
       perform: () => router.push('/blog'),
     },
@@ -60,7 +59,7 @@ const App = () => {
       id: 'tagsAction',
       name: t('headerNavLinks:tags'),
       shortcut: ['t', 'g'],
-      keywords: 'hashtags',
+      keywords: t('commandPalette:tagsKeywords'),
       section: navigationSection,
       perform: () => router.push('/tags'),
     },
@@ -68,7 +67,7 @@ const App = () => {
       id: 'aboutAction',
       name: t('headerNavLinks:about'),
       shortcut: ['a', 'b'],
-      keywords: 'information biography',
+      keywords: t('commandPalette:aboutKeywords'),
       section: navigationSection,
       perform: () => router.push('/about'),
     },
@@ -78,7 +77,7 @@ const App = () => {
       id: 'resumeAction',
       name: t('social:resume'),
       shortcut: ['r', 'e'],
-      keywords: 'cv curriculum',
+      keywords: t('commandPalette:resumeKeywords'),
       section: socialsSection,
       perform: () => router.push(siteMetadata.resume),
       icon: <SocialIcon kind="resume" href={siteMetadata.resume} size="5" />,
@@ -87,7 +86,7 @@ const App = () => {
       id: 'emailAction',
       name: t('social:email'),
       shortcut: ['e', 'm'],
-      keywords: 'gmail address inbox',
+      keywords: t('commandPalette:emailKeywords'),
       section: socialsSection,
       perform: () => router.push(siteMetadata.email),
       icon: (
@@ -102,7 +101,7 @@ const App = () => {
       id: 'githubAction',
       name: 'GitHub',
       shortcut: ['g', 'h'],
-      keywords: 'work publications websites',
+      keywords: t('commandPalette:githubKeywords'),
       section: socialsSection,
       icon: <SocialIcon kind="github" href={siteMetadata.github} size="5" />,
       perform: () => router.push(siteMetadata.github),
@@ -111,7 +110,7 @@ const App = () => {
       id: 'linkedinAction',
       name: 'LinkedIn',
       shortcut: ['l', 'i'],
-      keywords: 'work publications biography',
+      keywords: t('commandPalette:linkedinKeywords'),
       section: socialsSection,
       icon: (
         <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size="5" />
@@ -122,7 +121,7 @@ const App = () => {
       id: 'twitterAction',
       name: 'Twitter',
       shortcut: ['t', 'w'],
-      keywords: 'tweets takes',
+      keywords: t('commandPalette:twitterKeywords'),
       section: socialsSection,
       icon: <SocialIcon kind="twitter" href={siteMetadata.twitter} size="5" />,
       perform: () => router.push(siteMetadata.twitter),
@@ -140,7 +139,7 @@ const App = () => {
       id: 'privacyPolicyAction',
       name: t('commandPalette:privacyPolicy'),
       shortcut: ['p', 'p'],
-      keywords: 'privacy statement',
+      keywords: t('commandPalette:privacyPolicyKeywords'),
       section: otherSection,
       icon: <SocialIcon kind="globe" href={'/'} size="5" />,
       perform: () => router.push('/'),
@@ -150,7 +149,7 @@ const App = () => {
       id: 'light',
       name: t('commandPalette:light'),
       section: '',
-      keywords: 'light theme day',
+      keywords: t('commandPalette:lightKeywords'),
       icon: <SocialIcon kind="sun" href={'/'} size="5" />,
       parent: 'theme',
       perform: () => setTheme('light'),
@@ -159,9 +158,8 @@ const App = () => {
       id: 'dark',
       name: t('commandPalette:dark'),
       section: '',
-      keywords: 'dark theme night',
+      keywords: t('commandPalette:darkKeywords'),
       icon: <SocialIcon kind="moon" href={'/'} size="5" />,
-
       parent: 'theme',
       perform: () => setTheme('dark'),
     },
