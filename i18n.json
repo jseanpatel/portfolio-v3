@@ -2,7 +2,7 @@
   "locales": ["en", "es"],
   "defaultLocale": "en",
   "pages": {
-    "*": ["common", "headerNavLinks", "newsletter", "404", "SEO"],
+    "*": ["common", "headerNavLinks", "404", "SEO", "social", "commandPalette"],
     "/projects": ["projects"],
     "/tags": ["tags"],
     "/": ["home"]

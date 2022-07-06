@@ -5,6 +5,12 @@ import Youtube from './youtube.svg';
 import Linkedin from './linkedin.svg';
 import Twitter from './twitter.svg';
 import Resume from './resume.svg';
+import Home from './home.svg';
+import Projects from './projects.svg';
+import Globe from './globe.svg';
+import Switch from './switch.svg';
+import Sun from './sun.svg';
+import Moon from './moon.svg';
 
 // Icons taken from: https://simpleicons.org/
 
@@ -16,6 +22,12 @@ const components = {
   linkedin: Linkedin,
   twitter: Twitter,
   resume: Resume,
+  home: Home,
+  projects: Projects,
+  globe: Globe,
+  switch: Switch,
+  sun: Sun,
+  moon: Moon,
 };
 
 const SocialIcon = ({ kind, href, size = 8 }) => {

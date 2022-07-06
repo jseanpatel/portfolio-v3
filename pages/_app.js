@@ -1,12 +1,13 @@
-import '@/css/tailwind.css'
-import '@/css/prism.css'
+import '@/css/tailwind.css';
+import '@/css/prism.css';
 
-import { ThemeProvider } from 'next-themes'
-import Head from 'next/head'
+import { ThemeProvider } from 'next-themes';
+import Head from 'next/head';
 
-import Analytics from '@/components/analytics'
-import LayoutWrapper from '@/components/LayoutWrapper'
-import RSS from '@/components/Rss'
+import Analytics from '@/components/analytics';
+import LayoutWrapper from '@/components/LayoutWrapper';
+import RSS from '@/components/Rss';
+import CommandPalette from '@/components/CommandPalette';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -14,11 +15,12 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
+      <CommandPalette />
       <Analytics />
       <LayoutWrapper>
         <Component {...pageProps} />
       </LayoutWrapper>
       <RSS />
     </ThemeProvider>
-  )
+  );
 }

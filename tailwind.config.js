@@ -32,7 +32,8 @@ module.exports = {
       colors: {
         primary: colors.green,
         //@ts-ignore
-        gray: colors.neutral, // TODO: Remove ts-ignore after tw types gets updated to v3
+        gray: colors.neutral,
+        commandPalette: 'rgb(28 28 29)', // TODO: Remove ts-ignore after tw types gets updated to v3
       },
       typography: (theme) => ({
         DEFAULT: {
