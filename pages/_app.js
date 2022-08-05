@@ -8,6 +8,7 @@ import Analytics from '@/components/analytics';
 import LayoutWrapper from '@/components/LayoutWrapper';
 import RSS from '@/components/Rss';
 import CommandPalette from '@/components/CommandPalette';
+import { KBarProvider } from 'kbar';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -17,9 +18,11 @@ export default function App({ Component, pageProps }) {
       </Head>
       <CommandPalette />
       <Analytics />
-      <LayoutWrapper>
-        <Component {...pageProps} />
-      </LayoutWrapper>
+      <KBarProvider>
+        <LayoutWrapper>
+          <Component {...pageProps} />
+        </LayoutWrapper>
+      </KBarProvider>
       <RSS />
     </ThemeProvider>
   );

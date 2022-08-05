@@ -7,6 +7,7 @@ import SectionContainer from './SectionContainer';
 import Footer from './Footer';
 import MobileNav from './MobileNav';
 import ThemeSwitch from './ThemeSwitch';
+import CommandPaletteToggle from './CommandPaletteToggle';
 
 import useTranslation from 'next-translate/useTranslation';
 import { useRouter } from 'next/router';
@@ -74,6 +75,7 @@ const LayoutWrapper = ({ children }) => {
               ))}
             </select>
             <ThemeSwitch />
+            <CommandPaletteToggle />
             <MobileNav />
           </div>
         </header>
