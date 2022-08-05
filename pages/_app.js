@@ -7,8 +7,7 @@ import Head from 'next/head';
 import Analytics from '@/components/analytics';
 import LayoutWrapper from '@/components/LayoutWrapper';
 import RSS from '@/components/Rss';
-import CommandPalette from '@/components/CommandPalette';
-import { KBarProvider } from 'kbar';
+import { CommandProvider, CommandBar } from '@/components/CommandPalette';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -16,13 +15,13 @@ export default function App({ Component, pageProps }) {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
-      <CommandPalette />
       <Analytics />
-      <KBarProvider>
+      <CommandProvider>
+        <CommandBar />
         <LayoutWrapper>
           <Component {...pageProps} />
         </LayoutWrapper>
-      </KBarProvider>
+      </CommandProvider>
       <RSS />
     </ThemeProvider>
   );
