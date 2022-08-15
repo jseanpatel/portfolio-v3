@@ -1,6 +1,8 @@
 import Link from './Link';
 import siteMetadata from '@/data/siteMetadata';
 import SocialIcon from '@/components/social-icons';
+import FooterLogo from '@/data/jacob-logo-footer.svg';
+
 import { useRouter } from 'next/router';
 
 export default function Footer() {
@@ -14,6 +16,9 @@ export default function Footer() {
   return (
     <footer>
       <div className="flex flex-col items-center mt-16">
+        <div className="flex mb-10 space-x-4">
+          <FooterLogo className="cursor-pointer hover:opacity-75" />
+        </div>
         <div className="flex mb-3 space-x-4">
           <SocialIcon kind="resume" href={siteMetadata.resume} size="6" />
 
