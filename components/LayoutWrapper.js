@@ -40,7 +40,7 @@ const LayoutWrapper = ({ children }) => {
                     <div className="hidden h-6 mb-2 text-2xl font-semibold xl:block">
                       {siteMetadata.headerTitle[locale]}
                     </div>
-                    <div className="hidden h-6 mb-1 text-2xl font-semibold md:block xl:hidden">
+                    <div className="hidden h-6 mb-2 text-2xl font-semibold md:block xl:hidden">
                       {siteMetadata.headerTitleShortened[locale]}
                     </div>
                   </>
