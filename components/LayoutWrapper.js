@@ -31,7 +31,9 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label="Jacob Patel - Developer Portfolio">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Logo className="hover:opacity-75 hover-pointer" />
+                  <Link href="/">
+                    <Logo className="hover:opacity-75 hover-pointer" />
+                  </Link>
                 </div>
                 {typeof siteMetadata.headerTitle[locale] === 'string' ? (
                   <>
