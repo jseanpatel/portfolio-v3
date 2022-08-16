@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-onchange */
 import siteMetadata from '@/data/siteMetadata';
 import headerNavLinks from '@/data/headerNavLinks';
-import Logo from '@/data/logo.svg';
+import Logo from '@/data/jacob-logo.svg';
 import Link from './Link';
 import SectionContainer from './SectionContainer';
 import Footer from './Footer';
@@ -31,14 +31,16 @@ const LayoutWrapper = ({ children }) => {
             <Link href="/" aria-label="Jacob Patel - Developer Portfolio">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
-                  <Logo />
+                  <Link href="/">
+                    <Logo className="hover:opacity-75 hover-pointer" />
+                  </Link>
                 </div>
                 {typeof siteMetadata.headerTitle[locale] === 'string' ? (
                   <>
                     <div className="hidden h-6 mb-2 text-2xl font-semibold xl:block">
                       {siteMetadata.headerTitle[locale]}
                     </div>
-                    <div className="hidden h-6 mb-1 text-2xl font-semibold md:block xl:hidden">
+                    <div className="hidden h-6 mb-2 text-2xl font-semibold md:block xl:hidden">
                       {siteMetadata.headerTitleShortened[locale]}
                     </div>
                   </>

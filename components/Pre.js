@@ -1,27 +1,32 @@
-import { useState, useRef } from 'react'
+import { useState, useRef } from 'react';
 
 const Pre = (props) => {
-  const textInput = useRef(null)
-  const [hovered, setHovered] = useState(false)
-  const [copied, setCopied] = useState(false)
+  const textInput = useRef(null);
+  const [hovered, setHovered] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const onEnter = () => {
-    setHovered(true)
-  }
+    setHovered(true);
+  };
   const onExit = () => {
-    setHovered(false)
-    setCopied(false)
-  }
+    setHovered(false);
+    setCopied(false);
+  };
   const onCopy = () => {
-    setCopied(true)
-    navigator.clipboard.writeText(textInput.current.textContent)
+    setCopied(true);
+    navigator.clipboard.writeText(textInput.current.textContent);
     setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-  }
+      setCopied(false);
+    }, 2000);
+  };
 
   return (
-    <div ref={textInput} onMouseEnter={onEnter} onMouseLeave={onExit} className="relative">
+    <div
+      ref={textInput}
+      onMouseEnter={onEnter}
+      onMouseLeave={onExit}
+      className="relative"
+    >
       {hovered && (
         <button
           aria-label="Copy code"
@@ -65,7 +70,7 @@ const Pre = (props) => {
 
       <pre>{props.children}</pre>
     </div>
-  )
-}
+  );
+};
 
-export default Pre
+export default Pre;

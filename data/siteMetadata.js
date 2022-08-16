@@ -6,7 +6,7 @@ const siteMetadata = {
   author: { en: 'Jacob Patel', es: 'Jacobo Patel Iglesias' },
   city: 'Berkeley, California',
   headerTitle: { en: 'Jacob Patel', es: 'Jacobo Patel Iglesias' },
-  headerTitleShortened: { en: 'Jacob Patel', es: 'Jacobo Patel' },
+  headerTitleShortened: { en: 'Jacob Patel', es: 'Jacobo' },
   // description: 'A blog created with Next.js and Tailwind.css',
   description: {
     en:
@@ -18,7 +18,7 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://jseanpa.tel',
   siteRepo: 'https://github.com/jseanpatel/portfolio-v3',
-  siteLogo: '/static/images/logo.png',
+  siteLogo: '/static/images/jacob-logo.svg',
   image: '/static/images/avatar.jpg',
   socialBanner: '/static/images/twitter-card.png',
   email: 'hello@jseanpa.tel',
