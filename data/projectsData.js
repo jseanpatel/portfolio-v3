@@ -1,20 +1,36 @@
 const projectsData = {
   en: [
     {
-      title: 'A Search Engine',
-      description: `What if you could look up any information in the world? Webpages, images, videos
-      and more. Google has many features to help you find exactly what you're looking
-      for.`,
+      title: 'Ladder Designs',
+      subTitle: 'Freelance website design agency for educational groups',
+      type: 'Website',
+      description: `A design portfolio to house agency projects and contact information. Created to produce the highest quality software and educational resources for schools and teachers.`,
       imgSrc: '/static/images/google.png',
-      href: 'https://www.google.com',
+      href: 'https://ladderdesigns.co',
     },
     {
-      title: 'The Time Machine',
-      description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-      to the desired date and press "Go". No more worrying about lost keys or
-      forgotten handphones with this simple yet affordable solution.`,
+      title: 'Treetop Learning',
+      subTitle: 'Educational platform for online learning',
+      type: 'Web App',
+      description: `An educational platform to connect marginalized students with free, high-quality computer science lessons. Created to offer students custom-built learning tools, and a personalized curriculum.`,
       imgSrc: '/static/images/time-machine.jpg',
-      href: '/blog/the-time-machine',
+      href: 'https://treetoplearning.org',
+    },
+    {
+      title: 'DBQ Prepper',
+      subTitle: 'Educational tool for AP testing during COVID-19',
+      type: 'Web App',
+      description: `A web app to help AP students acclimate to the new CollegeBoard COVID-19 testing procedures. Created to emulate test-day conditions and bridge gaps for students lacking experience with online testing.`,
+      imgSrc: '/static/images/time-machine.jpg',
+      href: 'https://dbqprepper.com/',
+    },
+    {
+      title: 'Maribel',
+      subTitle: 'All-in-one tool for formatting MLA papers',
+      type: 'Web App',
+      description: `A web app to automatically generate MLA-formatted PDFs from simple HTML inputs. Created to promote accessibility in education to the elderly and technologically-illiterate pursuing higher education.`,
+      imgSrc: '/static/images/time-machine.jpg',
+      href: 'https://maribel.io/',
     },
   ],
   es: [
@@ -35,6 +51,6 @@ const projectsData = {
       href: '/blog/the-time-machine',
     },
   ],
-}
+};
 
-export default projectsData
+export default projectsData;
