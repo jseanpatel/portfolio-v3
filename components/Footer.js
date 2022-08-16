@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="flex flex-col items-center mt-16">
-        <div className="flex mb-10 space-x-4">
+        <div className="flex mb-8 space-x-4">
           <Link href="/">
             <FooterLogo className="cursor-pointer hover:opacity-75" />
           </Link>
