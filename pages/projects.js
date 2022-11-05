@@ -10,7 +10,7 @@ export async function getStaticProps({ locale, locales }) {
 
 export default function Projects({ locale, availableLocales }) {
   const { t } = useTranslation();
-  console.log(Array.from(projectsData));
+
   return (
     <>
       <PageSEO
@@ -21,13 +21,13 @@ export default function Projects({ locale, availableLocales }) {
         availableLocales={availableLocales}
       />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pb-8 space-y-2 pt-36 md:pt-48 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-16">
+        <div className="pb-8 mt-8 space-y-2 md:space-y-5">
+          {/* <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-16">
             {t('projects:description')}
-          </h1>
+          </h1> */}
           <div className="container py-12">
             <div className="flex flex-wrap -m-4">
-              {/* {projectsData[locale].map((d) => (
+              {projectsData[locale].map((d) => (
                 <Card
                   key={d.title}
                   title={d.title}
@@ -35,7 +35,7 @@ export default function Projects({ locale, availableLocales }) {
                   imgSrc={d.imgSrc}
                   href={d.href}
                 />
-              ))} */}
+              ))}
             </div>
           </div>
         </div>
