@@ -58,7 +58,7 @@ const projectsData = {
       href: 'https://dbqprepper.com',
     },
     {
-      title: 'aTABical Tabulation Software',
+      title: 'aTABical',
       description: `Una aplicación web para ayudar a los estudiantes de AP a adaptarse al nuevo CollegeBoard
       Procedimientos de prueba de COVID-19. Creado para emular las condiciones del día de la prueba y
       cerrar las brechas para los estudiantes que carecen de experiencia con las pruebas en línea.`,
