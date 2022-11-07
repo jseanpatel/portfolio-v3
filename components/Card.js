@@ -10,7 +10,7 @@ const Card = ({ title, description, imgSrc, href }) => {
       className="p-4 md:w-1/2 md hover:opacity-75"
       style={{ maxWidth: '544px' }}
     >
-      <div className="h-full overflow-hidden border-2 border-gray-200 rounded-lg border-opacity-60 dark:border-gray-700">
+      <div className="h-full overflow-hidden border-4 border-gray-200 rounded-lg border-opacity-60 dark:border-gray-700">
         {href ? (
           <Link href={href} aria-label={`Link to ${title}`}>
             <Image

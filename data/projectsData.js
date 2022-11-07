@@ -26,9 +26,8 @@ const projectsData = {
     },
     {
       title: 'aTABical Tabulation Software',
-      description: `A web app to help AP students acclimate to the new CollegeBoard
-      COVID-19 testing procedures. Created to emulate test-day conditions and
-      bridge gaps for students lacking experience with online testing.`,
+      description: `A complete web platform used to track and summate balloting for mock trial tournaments.
+      Created to simulate the in-person competition format in an online setting.`,
       imgSrc: '/static/images/projects/atabical.png',
       href: 'https://atabical.com',
     },
@@ -59,10 +58,9 @@ const projectsData = {
     },
     {
       title: 'aTABical',
-      description: `Una aplicación web para ayudar a los estudiantes de AP a adaptarse al nuevo CollegeBoard
-      Procedimientos de prueba de COVID-19. Creado para emular las condiciones del día de la prueba y
-      cerrar las brechas para los estudiantes que carecen de experiencia con las pruebas en línea.`,
-      imgSrc: '/static/images/projects/atabical.png`',
+      description: `Una plataforma web completa utilizada para rastrear y sumar votaciones para torneos de juicios simulados.
+      Creado para simular el formato de competición presencial en un entorno online.`,
+      imgSrc: '/static/images/projects/atabical.png',
       href: 'https://atabical.com',
     },
   ],
