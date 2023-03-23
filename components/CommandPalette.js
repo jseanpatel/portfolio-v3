@@ -283,7 +283,21 @@ export const CommandProvider = (props) => {
       perform: () => router.push(siteMetadata.twitter),
     },
     // SECTION: OTHER
-
+    {
+      id: 'heismindAction',
+      name: t('commandPalette:heismind'),
+      keywords: t('commandPalette:heismindKeywords'),
+      icon: (
+        <SocialIcon
+          kind="heismind"
+          href={'https://heismind.jseanpa.tel'}
+          size="5"
+        />
+      ),
+      perform: () => router.push('https://heismind.jseanpa.tel'),
+      shortcut: ['h', 'e'],
+      section: otherSection,
+    },
     {
       id: 'theme',
       name: t('commandPalette:changeTheme'),

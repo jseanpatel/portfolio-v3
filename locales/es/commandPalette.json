@@ -3,6 +3,7 @@
   "navigation": "Navegación",
   "social": "Social",
   "changeTheme": "Cambiar de tema...",
+  "heismind": "Heismind",
   "light": "Luz",
   "dark": "Oscuro",
   "other": "Otro",
@@ -16,6 +17,7 @@
   "githubKeywords": "sitios web publicaciones trabajo",
   "linkedinKeywords": "trabajo publicaciones biografia",
   "twitterKeywords": "tweets opiniones",
+  "heismindKeywords": "obsidian heismind cerebro conocimiento",
   "lightKeywords": "día tema luz",
   "darkKeywords": "noche tema oscuro"
 }

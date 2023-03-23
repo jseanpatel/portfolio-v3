@@ -9,6 +9,7 @@ import Home from './home.svg';
 import Projects from './projects.svg';
 import Globe from './globe.svg';
 import Switch from './switch.svg';
+import Heismind from './heismind.svg';
 import Sun from './sun.svg';
 import Moon from './moon.svg';
 
@@ -24,8 +25,10 @@ const components = {
   resume: Resume,
   home: Home,
   projects: Projects,
+  heismind: Heismind,
   globe: Globe,
   switch: Switch,
+
   sun: Sun,
   moon: Moon,
 };
