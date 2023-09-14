@@ -14,7 +14,7 @@ const projectsData = {
       high-quality computer science lessons. Created to offer students
       custom-built learning tools, and a personalized curriculum.`,
       imgSrc: '/static/images/projects/treetop-learning.png',
-      href: 'https://treetoplearning.org',
+      href: 'https://github.com/treetoplearning/cambium',
     },
     {
       title: 'DBQ Prepper',
