@@ -4,15 +4,15 @@ const siteMetadata = {
     es: 'Jacobo Patel Iglesias - Cartera de Desarrolladores',
   },
   author: { en: 'Jacob Patel', es: 'Jacobo Patel Iglesias' },
-  city: 'Berkeley, California',
+  city: 'San Francisco, California',
   headerTitle: { en: 'Jacob Patel', es: 'Jacobo Patel Iglesias' },
   headerTitleShortened: { en: 'Jacob Patel', es: 'Jacobo' },
   // description: 'A blog created with Next.js and Tailwind.css',
   description: {
     en:
-      "I'm a rising senior at the University of California, Berkeley studying computer science and education, with an emphasis in educational technology.",
+      "I'm a software engineer and recent graduate from the University of California, Berkeley where I studied computer science and education with an emphasis in educational technology.",
     es:
-      'Soy un estudiante de último año en la Universidad de California, Berkeley, que estudia informática y educación, con énfasis en tecnología educativa.',
+      'Soy ingeniero de software y recién graduado de la Universidad de California, Berkeley, donde estudié ciencias de la computación y educación con énfasis en tecnología educativa.',
   },
   language: 'en-us',
   theme: 'system', // system, dark or light
