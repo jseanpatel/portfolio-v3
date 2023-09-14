@@ -3,7 +3,7 @@ name: Jacobo Patel Iglesias
 layout: IndexLayout
 ---
 
-Soy ingeniero de software en [Padlet](https://padlet.com) y me gradué recientemente de la [Universidad de California, Berkeley](https://www.berkeley.edu/). En el colegio estudié informática y educación, con énfasis en tecnología educativa. Tengo doble ciudadanía hispanoamericana y dividí mi tiempo creciendo en [Redding, CA](https://en.wikipedia.org/wiki/Redding,_California) y [Orense, España](https://es .wikipedia.org/wiki/Orense).
+Soy ingeniero de software en [Padlet](https://padlet.com) y me gradué recientemente de la [Universidad de California, Berkeley](https://www.berkeley.edu/). En el colegio estudié informática y educación, con énfasis en tecnología educativa. Tengo doble ciudadanía hispanoamericana y dividí mi tiempo creciendo en [Redding, CA](https://en.wikipedia.org/wiki/Redding,_California) y [Orense, España](https://es.wikipedia.org/wiki/Orense).
 
 En 2016, ejecuté `git commit -m "primer commit"` en las siguientes líneas:
 
