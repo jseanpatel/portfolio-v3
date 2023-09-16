@@ -17,7 +17,7 @@ class HelloWorld {
 
 Over the next three years and 1900 commits, I enjoyed a smorgasbord of technical projects like an [iOS application](https://github.com/jseanpatel/flyright) where you fly a broken spaceship, a [webtool](https://maribel.io) to help adult learners reacclimate to university paper-writing and a complete Python [curriculum](https://treetoplearning.org/) aimed at bringing rural students into computer science.
 
-Now that I'm an undergraduate, the majority of time is spent making software to help facilitate learning that sticks. I do this mostly through my freelance website design company: [Ladder Designs](https://ladderdesigns.co). Right now we're closing PR's on an [online tabulation system](https://atabical.com/), which we're building so undergraduate [mock trial](https://www.collegemocktrial.org/) teams can track tournament information more efficiently.
+Nowadays, the majority of time is spent making software to help facilitate learning that sticks. I do this mostly through my freelance website design company: [Ladder Designs](https://ladderdesigns.co). Right now we're closing PR's on an [online tabulation system](https://atabical.com/), which we're building so undergraduate [mock trial](https://www.collegemocktrial.org/) teams can track tournament information more efficiently.
 
 I love to meet new people. Feel free to reach me at [hello@jseanpa.tel](mailto:hello@jseanpa.tel) or check out my [resume](https://drive.google.com/open?id=1zn7AY7H7qoi3dBHJk6UciWDOOvsibOyN). Also since you're here, stop by my [blog](./blog) and let me know what you think.
 
