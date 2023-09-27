@@ -10,7 +10,7 @@ En 2016, ejecuté `git commit -m "primer commit"` en las siguientes líneas:
 ```java:HolaMundo.java
 class HolaMundo {
     public static void main(String[] args) {
-        System.out.println("¡Hola, mundo!");
+        System.out.println("¡Hola, Mundo!");
     }
 }
 ```
