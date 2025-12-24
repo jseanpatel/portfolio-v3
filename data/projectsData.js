@@ -14,7 +14,7 @@ const projectsData = {
       high-quality computer science lessons. Created to offer students
       custom-built learning tools, and a personalized curriculum.`,
       imgSrc: '/static/images/projects/treetop-learning.png',
-      href: 'https://github.com/treetoplearning/cambium',
+      href: 'https://treetop-cambium.netlify.app',
     },
     {
       title: 'DBQ Prepper',
@@ -22,14 +22,14 @@ const projectsData = {
       COVID-19 testing procedures. Created to emulate test-day conditions and
       bridge gaps for students lacking experience with online testing.`,
       imgSrc: '/static/images/projects/dbq-prepper.png',
-      href: 'https://dbqprepper.com',
+      href: 'https://dbqprepper.app',
     },
     {
       title: 'aTABical Tabulation Software',
       description: `A complete web platform used to track and summate balloting for mock trial tournaments.
       Created to simulate the in-person competition format in an online setting.`,
       imgSrc: '/static/images/projects/atabical.png',
-      href: 'https://atabical.com',
+      sunsetted: true,
     },
   ],
   es: [
@@ -46,7 +46,7 @@ const projectsData = {
       Lecciones de informática de alta calidad. Creado para ofrecer a los estudiantes
       herramientas de aprendizaje personalizadas y un plan de estudios personalizado.`,
       imgSrc: '/static/images/projects/treetop-learning.png',
-      href: 'https://treetoplearning.org',
+      href: 'https://treetop-cambium.netlify.app',
     },
     {
       title: 'DBQ Prepper',
@@ -54,14 +54,14 @@ const projectsData = {
       Procedimientos de prueba de COVID-19. Creado para emular las condiciones del día de la prueba y
       cerrar las brechas para los estudiantes que carecen de experiencia con las pruebas en línea.`,
       imgSrc: '/static/images/projects/dbq-prepper.png',
-      href: 'https://dbqprepper.com',
+      href: 'https://dbqprepper.app',
     },
     {
       title: 'aTABical',
       description: `Una plataforma web completa utilizada para rastrear y sumar votaciones para torneos de juicios simulados.
       Creado para simular el formato de competición presencial en un entorno online.`,
       imgSrc: '/static/images/projects/atabical.png',
-      href: 'https://atabical.com',
+      sunsetted: true,
     },
   ],
 };

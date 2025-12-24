@@ -3,11 +3,11 @@
   "version": "1.1.2",
   "private": true,
   "scripts": {
-    "start": "next-remote-watch ./data",
-    "dev": "next dev",
-    "build": "next build && node ./scripts/generate-sitemap",
-    "serve": "next start",
-    "analyze": "cross-env ANALYZE=true next build",
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next-remote-watch ./data",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build && node ./scripts/generate-sitemap",
+    "serve": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start",
+    "analyze": "cross-env ANALYZE=true NODE_OPTIONS=--openssl-legacy-provider next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
     "prepare": "husky install"
   },

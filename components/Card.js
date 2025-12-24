@@ -3,11 +3,11 @@ import Link from './Link';
 
 import useTranslation from 'next-translate/useTranslation';
 
-const Card = ({ title, description, imgSrc, href }) => {
+const Card = ({ title, description, imgSrc, href, sunsetted }) => {
   const { t } = useTranslation();
   return (
     <div
-      className="p-4 md:w-1/2 md hover:opacity-75"
+      className={`p-4 md:w-1/2 md${href ? ' hover:opacity-75' : ''}`}
       style={{ maxWidth: '544px' }}
     >
       <div className="h-full overflow-hidden border-4 border-gray-200 rounded-lg border-opacity-60 dark:border-gray-700">
@@ -51,6 +51,11 @@ const Card = ({ title, description, imgSrc, href }) => {
             >
               {t('projects:learn')} &rarr;
             </Link>
+          )}
+          {sunsetted && (
+            <p className="text-sm italic text-gray-400 dark:text-gray-500">
+              {t('projects:sunsetted')}
+            </p>
           )}
         </div>
       </div>

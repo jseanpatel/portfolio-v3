@@ -19,7 +19,7 @@ const siteMetadata = {
   siteUrl: 'https://jseanpa.tel',
   siteRepo: 'https://github.com/jseanpatel/portfolio-v3',
   siteLogo: '/static/images/jacob-logo.svg',
-  image: '/static/images/avatar.jpg',
+  image: '/static/images/avatar.jpeg',
   socialBanner: '/static/images/twitter-card.png',
   email: 'hello@jseanpa.tel',
   github: 'https://github.com/jseanpatel',

@@ -1,6 +1,6 @@
 ---
 name: Jacobo Patel Iglesias
-avatar: /static/images/avatar.jpg
+avatar: /static/images/avatar.jpeg
 occupation: Ingeniero de software
 email: hello@jseanpa.tel
 twitter: https://twitter.com/jseanpatel

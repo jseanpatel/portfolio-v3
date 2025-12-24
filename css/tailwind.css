@@ -10,6 +10,17 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-y: scroll !important;
+  scrollbar-gutter: stable;
+}
+
+/* Prevent KBar from adding padding to compensate for scrollbar */
+body {
+  padding-right: 0 !important;
+}
+
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
 input:-webkit-autofill,
 input:-webkit-autofill:focus {

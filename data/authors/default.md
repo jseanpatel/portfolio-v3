@@ -1,6 +1,6 @@
 ---
 name: Jacob Patel
-avatar: /static/images/avatar.jpg
+avatar: /static/images/avatar.jpeg
 occupation: Software Engineer
 email: hello@jseanpa.tel
 twitter: https://twitter.com/jseanpatel
