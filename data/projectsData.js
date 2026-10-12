@@ -6,7 +6,7 @@ const projectsData = {
       to produce the highest quality software and educational resources for
       schools and teachers.`,
       imgSrc: '/static/images/projects/ladder-designs.png',
-      href: 'https://ladderdesigns.co',
+      href: 'https://ladderdesigns.netlify.app',
     },
     {
       title: 'Treetop Learning',
@@ -38,7 +38,7 @@ const projectsData = {
       description: `Un portafolio de diseño para albergar proyectos de agencias e información de contacto. 
       Creado para producir software y recursos educativos de la más alta calidad para escuelas y maestros.`,
       imgSrc: '/static/images/projects/ladder-designs.png',
-      href: 'https://ladderdesigns.co',
+      href: 'https://ladderdesigns.netlify.app',
     },
     {
       title: 'Treetop Learning',
