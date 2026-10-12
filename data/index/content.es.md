@@ -18,7 +18,7 @@ class HolaMundo {
 Durante los siguientes tres años y 1900 confirmaciones, disfruté de una mezcla heterogénea de proyectos técnicos como una [aplicación para iOS](https://github.com/jseanpatel/flyright) en la que vuelas una nave espacial rota, una
 [herramienta](https://maribel.io) para ayudar a los estudiantes adultos a reaclimatarse a la redacción de documentos universitarios y un [plan de estudios](https://treetop-cambium.netlify.app) completo de Python destinado a acercar a los estudiantes rurales a las ciencias de la computación.
 
-Ahora, la mayor parte del tiempo lo paso creando software para ayudar a facilitar el aprendizaje que se mantiene. Hago esto principalmente a través de mi empresa independiente de diseño de sitios web: [Ladder Designs](https://ladderdesigns.co).
+Ahora, la mayor parte del tiempo lo paso creando software para ayudar a facilitar el aprendizaje que se mantiene. Hago esto principalmente a través de mi empresa independiente de diseño de sitios web: [Ladder Designs](https://ladderdesigns.netlify.app).
 
 Me encanta conocer gente nueva. No dude en comunicarse conmigo en [hello@jseanpa.tel](mailto:hello@jseanpa.tel) o echa un vistazo a mi [currículum](https://drive.google.com/open?id=1zn7AY7H7qoi3dBHJk6UciWDOOvsibOyN). Además, ya que estás aquí, pásate por mi [blog](./blog) y déjame saber lo que piensas.
 
