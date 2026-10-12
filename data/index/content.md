@@ -15,7 +15,7 @@ class HelloWorld {
 }
 ```
 
-Over the next three years and 1900 commits, I enjoyed a smorgasbord of technical projects like an [iOS application](https://github.com/jseanpatel/flyright) where you fly a broken spaceship, a [webtool](https://maribel.io) to help adult learners reacclimate to university paper-writing and a complete Python [curriculum](https://treetop-cambium.netlify.app) aimed at bringing rural students into computer science.
+Over the next three years and 1900 commits, I enjoyed a smorgasbord of technical projects like an [iOS application](https://github.com/jseanpatel/flyright) where you fly a broken spaceship, a [webtool](https://maribel.netlify.app) to help adult learners reacclimate to university paper-writing and a complete Python [curriculum](https://treetop-cambium.netlify.app) aimed at bringing rural students into computer science.
 
 Nowadays, the majority of time is spent making software to help facilitate learning that sticks. I do this mostly through my freelance website design company: [Ladder Designs](https://ladderdesigns.netlify.app).
 
