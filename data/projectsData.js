@@ -22,7 +22,7 @@ const projectsData = {
       COVID-19 testing procedures. Created to emulate test-day conditions and
       bridge gaps for students lacking experience with online testing.`,
       imgSrc: '/static/images/projects/dbq-prepper.png',
-      href: 'https://dbqprepper.app',
+      href: 'https://dbqprepper.netlify.app',
     },
     {
       title: 'aTABical Tabulation Software',
@@ -54,7 +54,7 @@ const projectsData = {
       Procedimientos de prueba de COVID-19. Creado para emular las condiciones del día de la prueba y
       cerrar las brechas para los estudiantes que carecen de experiencia con las pruebas en línea.`,
       imgSrc: '/static/images/projects/dbq-prepper.png',
-      href: 'https://dbqprepper.app',
+      href: 'https://dbqprepper.netlify.app',
     },
     {
       title: 'aTABical',
