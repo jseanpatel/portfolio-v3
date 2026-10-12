@@ -69,5 +69,8 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
+  },
+  "engines": {
+    "node": "24.x"
   }
 }
